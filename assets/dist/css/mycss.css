@@ -1,0 +1,219 @@
+
+/* contact form */
+
+
+.form-container{
+    font-family: 'Roboto', sans-serif;
+    padding: 40px 40px 0 0;
+    position: relative;
+}
+.form-container .form-icon{
+    color: #E6145E;
+    background-color: #fff;
+    font-size: 40px;
+    text-align: center;
+    line-height: 80px;
+    height: 80px;
+    width: 80px;
+    border: 3px solid #E6145E;
+    border-radius: 50% 50% 50% 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+.form-container .form-horizontal{
+    background: linear-gradient(#e7e7e7 25px,rgba(255,255,255,0.97) 25px);
+    padding: 40px 20px 20px;
+    box-shadow: 0 0 20px -5px rgba(0,0,0,0.3);
+    border-radius: 15px;
+}
+.form-container .title{
+    color: #222;
+    font-size: 27px;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    margin: 0 0 20px;
+}
+.form-container .title:after{
+    content: '';
+    background-color: #E6145E;
+    height: 3px;
+    width: 110px;
+    margin: 10px 0 0;
+    display: block;
+    clear: both;
+}
+.form-horizontal .form-group{
+    background-color: rgba(255,255,255,0.15);
+    margin: 0 0 15px;
+    border-bottom: 2px solid #e7e7e7;
+}
+.form-horizontal .input-icon{
+    color: #b5b5b5;
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+    height: 35px;
+    width: 30px;
+    margin: 0 0 0 4px;
+    vertical-align: top;
+    display: inline-block;
+}
+.form-horizontal .form-control{
+    color: #222;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    width: calc(100% - 40px);
+    height: 33px;
+    padding: 3px 10px 0 0;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    display: inline-block;
+    transition: all 0.3s;
+}
+.form-horizontal textarea.form-control{
+    height: auto;
+    width: 100%;
+}
+.form-horizontal .form-control:focus{
+    box-shadow: none;
+    border: none;
+}
+.form-horizontal .form-control::placeholder{
+    color: #b5b5b5;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.form-horizontal .btn{
+    color: #d1d1d1;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 15px 7px 20px;
+    margin: 0 auto;
+    border: 2px solid #e7e7e7;
+    border-radius: 20px;
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+.form-horizontal .btn:hover,
+.form-horizontal .btn:focus{
+    color: #E6145E;
+    background-color: #fff;
+    border: 2px solid #E6145E;
+}
+.form-horizontal .btn i{ transition: all 0.3s ease 0s; }
+.form-horizontal .btn:hover i{
+    color: #E6145E;
+    transform: translateX(3px);
+}
+
+
+
+
+
+
+
+
+/* Its Video Section CSS */
+
+.serviceBox{
+    color: #999;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 10px 0 15px;
+    position: relative;
+}
+.serviceBox:before,
+.serviceBox:after{
+    content: "";
+    background: #1e5270;
+    width: 150px;
+    height: 10px;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    clip-path: polygon(7% 0%, 93% 0%, 100% 100%, 0% 100%);
+}
+.serviceBox:after{
+    width: 80%;
+    height: 15px;
+    border-radius: 0 0 10px 10px;
+    top: auto;
+    bottom: 0;
+    clip-path: none;
+}
+.serviceBox .service-content{
+    background: #fff;
+    padding: 25px 20px;
+    border-radius: 10px;
+}
+.serviceBox .service-content:before{
+    content: "";
+    background:#1b657e;
+    width: 128px;
+    height: 100px;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+.serviceBox .service-icon{
+    color: #77787a;
+    background: linear-gradient(to left, #dedfe1, #f3f3f3);
+    font-size: 40px;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgba(0,0,0,0.03);
+    position: relative;
+    z-index: 1;
+}
+.serviceBox .service-icon:before{
+    content: "";
+    background: linear-gradient(to right, #dedfe1, #f3f3f3);
+    width: 88%;
+    height: 88%;
+    border-radius: 50%;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+}
+.serviceBox .title{
+    color: #1e5270;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+.serviceBox .description{
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+}
+.serviceBox.green:before{ background: #719e2a; }
+.serviceBox.green:after,
+.serviceBox.green .service-content:before{
+    background: #85bc16;
+}
+.serviceBox.green .title{ color: #85bc16; }
+@media only screen and (max-width:990px){
+    .serviceBox{ margin: 0 0 30px; }
+}
