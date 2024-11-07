@@ -1,0 +1,170 @@
+
+/* Product table */
+div.unstyledTable {
+    text-align: center;
+  }
+  .divTable.unstyledTable .divTableCell, .divTable.unstyledTable .divTableHead {
+    padding: 3px 4px;
+  }
+  .divTable.unstyledTable .divTableHeading {
+    background: #DDDDDD;
+  }
+  .divTable.unstyledTable .divTableHeading .divTableHead {
+    font-weight: normal;
+  }
+  .unstyledTable .tableFootStyle {
+    font-weight: bold;
+  }
+  /* DivTable.com */
+  .divTable{ display: table; }
+  .divTableRow { display: table-row; }
+  .divTableHeading { display: table-header-group;}
+  .divTableCell, .divTableHead { display: table-cell;}
+  .divTableHeading { display: table-header-group;}
+  .divTableFoot { display: table-footer-group;}
+  .divTableBody { display: table-row-group;}
+
+
+/* Product Box  */
+
+.serviceBox{
+    background: #fff;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    padding: 0 15px 25px;
+    margin: 10px;
+    border: 2px solid #ff4757;
+    border-radius: 50px 0;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3) inset;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+.serviceBox:before,
+.serviceBox:after{
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-top: 7px solid #ff6b81;
+    border-right: 7px solid #ff4757;
+    position: absolute;
+    top: -7px;
+    right: -7px;
+}
+.serviceBox:after{
+    border-top: none;
+    border-right: none;
+    border-bottom: 7px solid #ff4757;
+    border-left: 7px solid #ff6b81;
+    top: auto;
+    right: auto;
+    bottom: -7px;
+    left: -7px;
+}
+.serviceBox .service-icon{
+    color: #fff;
+    background: #ff6b81;
+    font-size: 35px;
+    width: 90px;
+    padding: 0 0 5px;
+    margin: 0 auto 30px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+    position: relative;
+}
+.serviceBox:hover .service-icon i{
+    transform: rotateX(360deg);
+    transition: all 0.3s;
+}
+.serviceBox .service-icon:before{
+    content: "";
+    background: #ff6b81;
+    width: calc(100% + 14px);
+    height: 10px;
+    transform: translateX(-50%);
+    position: absolute;
+    top: -10px;
+    left: 50%;
+}
+.serviceBox .service-icon span:before,
+.serviceBox .service-icon span:after{
+    content: '';
+    background-color: #ff4757;
+    height: 10px;
+    width: 15px;
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    left: -15px;
+    top: -10px;
+}
+.serviceBox .service-icon span:after{
+    left: auto;
+    right: -15px;
+}
+.serviceBox .title{
+    color: #ff4757;
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+.serviceBox .description{
+    font-size: 15px;
+    line-height: 25px;
+}
+.serviceBox.orange{ border-color: #f27100; }
+.serviceBox.orange:before{
+    border-top-color: #ff8d23;
+    border-right-color: #f27100;
+}
+.serviceBox.orange:after{
+    border-left-color: #ff8d23;
+    border-bottom-color: #f27100;
+}
+.serviceBox.orange .service-icon,
+.serviceBox.orange .service-icon:before{
+    background-color: #ff8d23;
+}
+.serviceBox.orange .service-icon span:before,
+.serviceBox.orange .service-icon span:after{
+    background-color: #f27100;
+}
+.serviceBox.orange .title{ color: #f27100; }
+.serviceBox.purple{ border-color: #5446A7; }
+.serviceBox.purple:before{
+    border-top-color: #7161C4;
+    border-right-color: #5446A7;
+}
+.serviceBox.purple:after{
+    border-left-color: #7161C4;
+    border-bottom-color: #5446A7;
+}
+.serviceBox.purple .service-icon,
+.serviceBox.purple .service-icon:before{
+    background-color: #7161C4;
+}
+.serviceBox.purple .service-icon span:before,
+.serviceBox.purple .service-icon span:after{
+    background-color: #5446A7;
+}
+.serviceBox.purple .title{ color: #5446A7; }
+.serviceBox.green{ border-color: #91c100; }
+.serviceBox.green:before{
+    border-top-color: #a3d313;
+    border-right-color: #91c100;
+}
+.serviceBox.green:after{
+    border-left-color: #a3d313;
+    border-bottom-color: #91c100;
+}
+.serviceBox.green .service-icon,
+.serviceBox.green .service-icon:before{
+    background-color: #a3d313;
+}
+.serviceBox.green .service-icon span:before,
+.serviceBox.green .service-icon span:after{
+    background-color: #91c100;
+}
+.serviceBox.green .title{ color: #91c100; }
+@media only screen and (max-width:990px){
+    .serviceBox{ margin: 10px 10px 50px; }
+}
