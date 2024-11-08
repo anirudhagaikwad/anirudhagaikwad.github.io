@@ -225,6 +225,53 @@
   }
 }
 
+
+#services .section-title h2 {
+  font-size: 28px;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#services .section-title p {
+  color: #666;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.service-item {
+  padding: 15px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  border-left: 4px solid #333;
+  transition: all 0.3s ease;
+}
+
+.service-item:hover {
+  background: #e8e8e8;
+}
+
+.service-item h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.service-item h4 i {
+  margin-right: 8px;
+  color: #007bff;
+}
+
+.service-item p {
+  font-size: 15px;
+  color: #666;
+}
+
   </style>
 </head>
 
@@ -248,7 +295,7 @@
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto " href="#portfolio">Gallary</a></li>
-          <li><a class="nav-link scrollto" href="https://api.whatsapp.com/send/?phone=918007915552&text=Hi%2CI%20got%20your%20number%20from%20your%20portfolio%20page&app_absent=0">Contact Now</a> </li> 
+          <li><a class="nav-link scrollto" href="https://api.whatsapp.com/send/?phone=918007915552&text=Hi%2CI%20got%20your%20number%20from%20your%20portfolio%20page&app_absent=0">gaikwad.anirudha@gmail.com</a> </li> 
           
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -525,34 +572,92 @@
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="about">
-      <div class="container">
 
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Services</h2>
-          <p>What I do offer</p>
-        </div>
+<!-- ======= Services Section ======= -->
+<section id="services" class="about">
+  <div class="container">
+    <div class="section-title" data-aos="zoom-out">
+      <h2>Services</h2>
+       <p>What I Offer</p> 
+    </div>
 
     <div class="row content" data-aos="fade-up">
-      <!-- Car Image on the Left Side -->
+      <!-- Left Side: Skills and Expertise -->
       <div class="col-lg-6">
-        <img src="assets/img/car/2.png" alt="" class="img-fluid">
+        <h3>Service Offerings</h3>
+        <div class="services-list">
+          <div class="service-item">
+            <h4><i class="bi bi-palette"></i> Academic Training & Mentorship
+            </h4>
+            <p>With extensive experience as a technical trainer, I excel in designing and delivering effective training programs that help students achieve their professional goals. My strengths include creating engaging learning materials, conducting interactive sessions, and fostering a supportive learning environment to empower students with practical skills and knowledge
+            </p>
+          </div>
+       
+          <div class="service-item">
+            <h4><i class="bi bi-palette"></i>Consultation & Project Management-Planning</h4>
+            <p>Offering consultation on tech stacks, project scoping, and efficient coding practices. With experience across Android, web development, and backend systems, I provide insights to optimize your project from start to deployed.
+            </p>
+          </div>
+          <div class="service-item">
+            <h4><i class="bi bi-palette"></i>Academic Documentation and Compliance</h4>
+            <p>Specialized in preparing and managing documentation for AICTE, DTE,NAAC and UGC requirements. With a deep understanding of compliance standards, I ensure accurate and timely submissions, handling everything from initial applications to annual reporting for educational institutions. My experience helps institutions streamline their processes, reduce errors, and stay aligned with regulatory expectations.
+            </p>
+          </div>
+
+          <div class="service-item">
+            <h4><i class="bi bi-palette"></i> Corporate Technical Training & Mentorship
+            </h4>
+            <p>Conducting Corporate workshops or one-on-one sessions in Rust,Java,Android,Python,web development and backend technologies. I help new developers understand best practices, get comfortable with code structure, and gain confidence in their skills.
+            </p>
+          </div>
+      
+          
+          <div class="service-item">
+            <h4><i class="bi bi-lightbulb"></i> Problem Solving</h4>
+            <p>Skilled in analyzing complex problems and implementing efficient solutions, excelling in logical thinking and troubleshooting.</p>
+          </div>
+        </div>
       </div>
 
-      <!-- Services List on the Right Side -->
+      <!-- Right Side: Services -->
       <div class="col-lg-6 pt-4 pt-lg-0">
- 
-
-
+        <h3>Service Offerings</h3>
+        <div class="services-list">
+          <div class="service-item">
+            <h4><i class="bi bi-phone"></i> Android App Development</h4>
+            <p>Develop high-quality, user-friendly Android applications with Kotlin, ensuring responsive design and smooth performance.</p>
+          </div>
+          <div class="service-item">
+            <h4><i class="bi bi-window-sidebar"></i> Web Development</h4>
+            <p>Create modern, responsive websites using Java, Jakarta EE, and Thymeleaf, from landing pages to complete applications.</p>
+          </div>
+          <div class="service-item">
+            <h4><i class="bi bi-server"></i> Backend Development</h4>
+            <p>Build robust backend systems with Rust/Spring Boot, Hibernate, and JPA, specializing in APIs, session management, and secure authentication.</p>
+          </div>
+          <div class="service-item">
+            <h4><i class="bi bi-palette"></i> UI/UX Design</h4>
+            <p>Design intuitive, user-centered interfaces for both Android and web, enhancing user experience with a clean design approach.</p>
+          </div>
+          <div class="service-item">
+            <h4><i class="bi bi-palette"></i> API Development & Integration</h4>
+            <p>Developing and integrating RESTful APIs for seamless communication between front-end and back-end systems. I ensure secure, scalable, and efficient APIs that enable smooth data exchange and interoperability.
+            </p>
+          </div>
+          <div class="service-item">
+            <h4><i class="bi bi-server"></i> Database Management</h4>
+            <p>Manage MySQL and PostgreSQL databases, handling CRUD operations and data security for reliable data storage and retrieval.</p>
+          </div>
+       
+        </div>
       </div>
-    </div>    
+    </div>
   </div>
 </section><!-- End Services Section -->
 
 
 
-
+    <!-- ======= Services Section ======= -->
 
     
     <!-- ======= Portfolio Section ======= -->
@@ -739,7 +844,8 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Waiting 
+                Anirudha Gaikwad Sir is a skilled and polite trainer who brings deep knowledge to their sessions. They explain the ""why"" behind each concept, making it easier to understand. Their focus on hands-on practice helps us apply what we learn right away. Overall, their teaching style makes learning enjoyable and effective.
+Also they identify the capabilities of students and give right direction to learn.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <!-- <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
@@ -752,7 +858,7 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Text.
+                  Sir you have a great quality which is your knowledge and your teaching are correlation was a wonderful.And this quality helps many students to learn, Understand and to implement their knowledge into the applications. Finally I would like to say teaching and knowledge has different parts but you have best combination of both.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <!-- <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt=""> -->
@@ -763,7 +869,7 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Text
+                  Mr. Aniruddha possesses a strong command over the subject matter, ensuring clear and accurate explanations. He provide relevant real-world examples that help clarify complex concepts.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <!-- <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=""> -->
@@ -775,7 +881,7 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Text
+                  The technical training delivered by Anirudh Sir was highly effective. He presented complex topics in a simple, understandable manner and engaged the participants well throughout the session. His expertise and clear explanations made the concepts easier to grasp, and the hands-on exercises were particularly useful. Overall, a well-conducted session, with room for more interaction on advanced topics.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <!-- <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt=""> -->
@@ -787,7 +893,7 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                 Text
+                  From what I’ve experienced, you’re dedicated and skilled in development especially with Java and Android. You approach projects with both detail and innovation, like integrating Firebase and handling complex permissions. Your persistence in overcoming challenges, especially in Android Studio, reflects your commitment to mastering development tools and delivering efficient solutions. A driven and resourceful.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <!-- <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=""> -->
