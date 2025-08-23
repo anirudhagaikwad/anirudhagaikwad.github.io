@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        section {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        @media (max-width: 600px) {
+            section {
+                padding: 15px;
+            }
+        }
+        .gallery-image {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        .gallery-image.active {
+            border: 2px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Profile Content -->
+    <section>
+        <h2>📚 Published MDBooks</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </section>
+    <section>
+        <h2>👤 About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </section>
+    <section>
+        <h2>💡 Proficiency</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+        </ul>
+    </section>
+    <section>
+        <h2>⚒️ Services</h2>
+        <ul>
+            <li>Web Development</li>
+            <li>Graphic Design</li>
+            <li>SEO</li>
+            <li>Consulting</li>
+        </ul>
+    </section>
+    <section>
+        <h2>🖼️ Photo Gallery</h2>
+        <div class="gallery">
+            <img class="gallery-image" src="https://via.placeholder.com/150" alt="Image 1">
+            <img class="gallery-image" src="https://via.placeholder.com/150" alt="Image 2">
+            <img class="gallery-image" src="https://via.placeholder.com/150" alt="Image 3">
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load content dynamically if needed
+        });
+
+        // Example for a simple gallery slider
+        const images = document.querySelectorAll('.gallery-image');
+        const currentImage = 0;
+
+        images.forEach((image, index) => {
+            image.addEventListener('click', () => {
+                images.forEach(img => img.classList.remove('active'));
+                image.classList.add('active');
+                currentImage = index;
+            });
+        });
+    </script>
+</body>
+</html>
