@@ -1,1009 +1,849 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="author" content="Anirudha Anil Gaikwad" />
-  <meta property="og:description"
-    content="I am a Software Developer and Corporate Technical Trainer with 14+ years in IT, driven by a passion for development and teaching. I stay at the forefront of industry trends to empower individuals and organizations in their pursuit of technological excellence." />
-  <meta property="og:title" content="I am a Software Developer and Corporate Technical Trainer with 14+ years in IT, driven by a passion for development and teaching. I stay at the forefront of industry trends to empower individuals and organizations in their pursuit of technological excellence." />
-  <meta name="twitter:title" content="I am a Software Developer and Corporate Technical Trainer with 14+ years in IT, driven by a passion for development and teaching. I stay at the forefront of industry trends to empower individuals and organizations in their pursuit of technological excellence." />
-  <meta property="og:url" content="https://anirudhagaikwad.github.io/" />
-  <meta property="og:site_name" content="I am a Software Developer and Corporate Technical Trainer with 14+ years in IT, driven by a passion for development and teaching. I stay at the forefront of industry trends to empower individuals and organizations in their pursuit of technological excellence." />
-
-  <meta property="og:image" content="assets/img/logo/apple-icon-180x180.png" />
-  <meta property="og:image" content="https://anirudhagaikwad.github.io/assets/img/logo/apple-icon-180x180.png" />
-
-  <meta content="I am a Software Developer and Corporate Technical Trainer with 14+ years in IT, driven by a passion for development and teaching. I stay at the forefront of industry trends to empower individuals and organizations in their pursuit of technological excellence." name="description">
-  <meta content="Freelancer,Software Developer,Corporate Technical Trainer,IT Industry Expert,14+ Years of Experience,Technology Enthusiast,Innovative Solutions,Industry Trends & Technologies,Empowering Organizations,Technical Excellence,Software Development,Skill Development,Technology Training,Mentorship & Coaching,Professional Trainer,Knowledge Sharing,Cutting-Edge Technologies,Consulting Services,Career Growth in Tech,Custom Software Solutions,Leadership & Mentorship,Rust,PhD,maharashtra,karnataka,explore" name="keywords"> 
-
-  
-  <title>Anirudha Anil Gaikwad</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <link href="assets/fontawesome/css/all.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/mystyle.css" rel="stylesheet">
-
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="57x57" href="assets/img/logo/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="assets/img/logo/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="assets/img/logo/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/logo/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="assets/img/logo/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="assets/img/logo/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="assets/img/logo/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="assets/img/logo/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="assets/img/logo/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="assets/img/logo/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo/favicon-16x16.png">
-  <link rel="manifest" href="assets/img/logo//manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="assets/img/logo/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Anirudha Anil Gaikwad">
+  <meta name="description" content="Software Developer and Corporate Technical Trainer with 14+ years in IT, passionate about development and teaching.">
+  <meta name="keywords" content="Freelancer,Software Developer,Corporate Technical Trainer,IT Industry Expert,Technology Training">
+  <meta property="og:title" content="Anirudha Anil Gaikwad - Software Developer & Trainer">
+  <meta property="og:description" content="Software Developer and Corporate Technical Trainer with 14+ years in IT, passionate about development and teaching.">
+  <meta property="og:image" content="assets/img/logo/apple-icon-180x180.png">
+  <meta property="og:url" content="https://anirudhagaikwad.github.io/">
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
   <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <title>Anirudha Anil Gaikwad</title>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo/favicon-16x16.png">
+  <meta name="theme-color" content="#EEAECA">
+  <!-- Boxicons for icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
   <style>
+    :root {
+      --primary-green: #EEAECA;
+      --primary-red: #94BBE9;
+      --hover-color: linear-gradient(135deg, #e0f7fa, #f3e5f5);
+    }
 
-.carousel-container {
-  position: relative;
-  text-align: center;
-  color: white;
-  padding: 20px;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
 
-.carousel-title {
-  font-size: 2.5em;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: white;
-  display: inline-block;
-  /* Animation for wave effect */
-  animation: wave-animation 2s infinite;
-}
+    body {
+      color: #333;
+      line-height: 1.6;
+      background: linear-gradient(135deg, var(--primary-green), var(--primary-red));
+    }
 
-.carousel-description {
-  font-size: 1.5vm;
-  margin-bottom: 20px;
-  color: white;
-  /* Animation for zoom effect */
-  animation: zoom-animation 2s infinite;
-  list-style-type: none; /* Removes the bullet points */
-  /* padding-left: 0;  Removes default padding for <ul> */
-  text-align: justify;  
-  line-height: 1.4;
-  padding: 0 5%;
-  text-align: justify;
-}
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: linear-gradient(135deg, var(--primary-green), var(--primary-red));
+      padding: 10px 20px;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
+    .logo img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin-right: 10px;
+      loading: lazy;
+    }
 
-/* Wave animation */
-@keyframes wave-animation {
-  0%, 100% { transform: translateY(0); }
-  25% { transform: translateY(-5px); }
-  50% { transform: translateY(5px); }
-  75% { transform: translateY(-5px); }
-}
+    .logo span {
+      color: #fff;
+      font-size: 1.2em;
+      font-weight: bold;
+      display: inline-block;
+      animation: wave-animation 2.5s ease-in-out infinite;
+    }
 
-/* Zoom animation */
-@keyframes zoom-animation {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-}
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
 
-.logo-image {
-  width: 50px;           /* Adjust size as needed */
-  height: 50px;          /* Keep it square */
-  border-radius: 50%;    /* Makes the image circular */
-  object-fit: cover;     /* Ensures image fills the circle */
-  padding: 5px;          /* Adds space around the image within the circle */
-  background-color: white; /* Optional: background color to fill space */
-  margin-top: 3px;       /* Adjusts positioning to add extra space from the top */
-}
+    nav ul li {
+      margin-left: 20px;
+    }
 
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9em;
+      transition: color 0.3s;
+    }
 
+    nav ul li a:hover {
+      color: var(--hover-color);
+      animation: wave-animation 2.5s ease-in-out;
+    }
 
-/* Container for the entire proficiency section */
-.proficiency-section {
-  background: #2c3e50;
-  padding: 20px;
-  border-radius: 10px;
-  color: #ecf0f1;
-  max-width: 800px;
-  margin: auto;
-}
+    .mobile-nav-toggle {
+      display: none;
+      color: #fff;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
 
-/* Main Title Styling */
-.proficiency-title {
-  font-size: 1.6em;
-  color: #f39c12;
-  text-align: center;
-  margin-bottom: 20px;
-  font-weight: bold;
-  border-bottom: 2px solid #f39c12;
-  padding-bottom: 10px;
-}
+    /* Wave Animation */
+    @keyframes wave-animation {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      25% {
+        transform: translateY(-8px) scale(1.05);
+        opacity: 0.9;
+      }
+      50% {
+        transform: translateY(8px) scale(1);
+        opacity: 1;
+      }
+      75% {
+        transform: translateY(-8px) scale(1.05);
+        opacity: 0.9;
+      }
+    }
 
-/* Flexbox layout for 3 columns */
-.skills-container {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
 
-/* Individual Column Styling */
-.skills-category {
-  flex: 1;                        /* Make each column equal width */
-  padding: 10px;
-  margin: 0 10px;                 /* Spacing between columns */
-  background: #34495e;            /* Background color for each column */
-  border-radius: 8px;
-}
+    /* Hero Section (Books Card) */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding: 100px 20px 40px;
+    }
 
-.skills-header {
-  font-size: 1.2em;
-  color: #f39c12;
-  margin-bottom: 10px;
-  text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding-bottom: 5px;
-}
+    /* Section General */
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-/* Styling for Each Skill List */
-.skills-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-.skills-list li {
-  font-size: 1.1em;
-  display: flex;
-  align-items: center;
-  padding: 8px 0;
-  color: #ecf0f1;
-  transition: color 0.3s ease;
-}
+    .section-title h2 {
+      font-size: 2em;
+      font-weight: bold;
+      color: #fff;
+    }
 
-.skills-list li i {
-  color: #f39c12;
-  margin-right: 8px;
-  font-size: 1.2em;
-  transition: transform 0.3s ease;
-}
+    .section-title p {
+      color: #fff;
+      font-size: 1.1em;
+    }
 
-/* Hover Effect */
-.skills-list li:hover i {
-  transform: scale(1.2);
-}
+    /* About Section */
+    .about .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      align-items: stretch;
+    }
 
-.skills-list li:hover {
-  color: #f39c12;
-}
+    .about .col-lg-6 {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+    }
 
-/* Operating System Section */
-.operating-system-section {
-  background: #34495e;
-  padding: 10px;
-  border-radius: 8px;
-  margin-top: 20px;
-}
+    .about-text {
+      text-align: justify;
+      font-size: 1.1em;
+      color: #fff;
+      padding: 20px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-/* Collapse Indicator */
-.collapse-indicator {
-  font-size: 1.5em;
-  font-weight: bold;
-  transition: transform 0.3s ease;
-}
+    .about-text a {
+      color: var(--hover-color);
+      text-decoration: none;
+    }
 
-.collapse-indicator.collapsed {
-  transform: rotate(45deg);
-}
+    .about-text a:hover {
+      text-decoration: underline;
+    }
 
-/* Responsive Adjustments for Smaller Screens */
-@media (max-width: 768px) {
-  .skills-container {
-    flex-direction: column;       /* Stack columns vertically on smaller screens */
-  }
-  
-  .skills-category {
-    margin-bottom: 20px;
-  }
-}
+    .about-image {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      width: 100%;
+      padding: 20px;
+    }
 
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      loading: lazy;
+    }
 
-#services .section-title h2 {
-  font-size: 28px;
-  color: #333;
-  font-weight: 700;
-  text-transform: uppercase;
-}
+    .proficiency-section {
+      background: linear-gradient(135deg, var(--primary-green), var(--primary-red));
+      padding: 20px;
+      border-radius: 10px;
+      color: #fff;
+      max-width: 1200px;
+      margin: 30px auto 0;
+    }
 
-#services .section-title p {
-  color: #666;
-}
+    .proficiency-title {
+      font-size: 1.5em;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-.services-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+    .skills-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-.service-item {
-  padding: 15px;
-  border-radius: 8px;
-  background: #f9f9f9;
-  border-left: 4px solid #333;
-  transition: all 0.3s ease;
-}
+    .skills-category {
+      flex: 1;
+      background: linear-gradient(135deg, #ffffff1b, #f5f5f5);
+      padding: 15px;
+      border-radius: 8px;
+    }
 
-.service-item:hover {
-  background: #e8e8e8;
-}
+    .skills-header {
+      font-size: 1.2em;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-.service-item h4 {
-  font-size: 18px;
-  margin-bottom: 5px;
-  display: flex;
-  align-items: center;
-}
+    .skills-list {
+      list-style: none;
+    }
 
-.service-item h4 i {
-  margin-right: 8px;
-  color: #007bff;
-}
+    .skills-list li {
+      font-size: 1em;
+      padding: 5px 0;
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
 
-.service-item p {
-  font-size: 15px;
-  color: #666;
-}
+    .skills-list li::before {
+      content: "✔";
+      color: #7b14bf;
+      margin-right: 8px;
+    }
 
+    /* Services Section */
+    .services .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .services .col-lg-6 {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .services-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .service-item {
+      padding: 15px;
+      background: #fff;
+      border-radius: 8px;
+      border-left: 4px solid #333;
+      transition: background 0.3s;
+    }
+
+    .service-item:hover {
+      background: #e8e8e8;
+    }
+
+    .service-item h4 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .service-item h4 i {
+      margin-right: 8px;
+      color: #007bff;
+    }
+
+    .service-item p {
+      font-size: 1em;
+      color: #333;
+      text-align: justify;
+    }
+
+    /* Portfolio Section */
+    .portfolio-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      loading: lazy;
+    }
+
+    .portfolio-info {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .portfolio-info a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+    }
+
+    /* Testimonials Section */
+    .testimonials-slider {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 10px;
+    }
+
+    .testimonials-slider::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .testimonials-slider::-webkit-scrollbar-thumb {
+      background: var(--hover-color);
+      border-radius: 4px;
+    }
+
+    .testimonials-slider::-webkit-scrollbar-track {
+      background: #e8e8e8;
+    }
+
+    .testimonial-item {
+      flex: 0 0 300px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 0 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      scroll-snap-align: start;
+    }
+
+    .testimonial-item p {
+      font-style: italic;
+      color: #666;
+      font-size: 0.95em;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, var(--primary-green), var(--primary-red));
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .social-links a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.5em;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      color: var(--hover-color);
+    }
+
+    .copyright {
+      margin-top: 10px;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--hover-color);
+      color: #7b14bf;
+      padding: 10px;
+      border-radius: 50%;
+      text-decoration: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(135deg, var(--primary-green), var(--primary-red));
+        padding: 20px;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .mobile-nav-toggle {
+        display: block;
+      }
+
+      .skills-container {
+        flex-direction: column;
+      }
+
+     
+      .testimonial-item {
+        flex: 0 0 250px;
+      }
+
+      .about .row {
+        flex-direction: column;
+      }
+
+      .about .col-lg-6 {
+        width: 100%;
+      }
+
+      .about-text {
+        max-width: 100%;
+        padding: 15px;
+      }
+
+      .about-image {
+        padding: 15px;
+      }
+
+      .about-image img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+      }
+
+      .proficiency-section {
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 992px) {
+     
+    }
+
+    @media (min-width: 1200px) {
+     
+    }
   </style>
 </head>
-
 <body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <div class="logo">
-        <a href="index.html" class="navbar-brand">
-          <img src="assets/img/logo/android-icon-192x192.png" loading="lazy" alt=" Anirudha Anil Gaikwad" class="brand-image img-circle elevation-3 logo-image" style="opacity: .8;">
-          <span class="brand-text" style="color: white;"> Anirudha Anil Gaikwad</span>
-        </a>
-      </div>
-      
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Gallary</a></li>
-          <li><a class="nav-link scrollto" href="https://books-research.github.io/" target="_blank" rel="noopener noreferrer"> books & research </a> </li> 
-          
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/img/logo/android-icon-192x192.png" alt="Anirudha Anil Gaikwad" loading="lazy">
+        <span>Anirudha Anil Gaikwad</span>
+      </a>
     </div>
-  </header><!-- End Header -->
+    <nav>
+      <ul>
+        <!-- <li><a href="#hero">Home</a></li> -->
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Gallery</a></li>
+        <li><a class="nav-link scrollto" href="https://books-research.github.io/" target="_blank" rel="noopener noreferrer"> books & research </a> </li> 
+      </ul>
+      <i class="bx bx-menu mobile-nav-toggle"></i>
+    </nav>
+  </header>
 
-<!-- Hero Section -->
-<section id="hero" class="d-flex flex-column justify-content-end align-items-center">
-  <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
-  
-    <!-- Slide with Text Only -->
-    <!-- <div class="carousel-item active">
-      <div class="carousel-container">
-       <div class="carousel-text">
-          <h2 class="carousel-title animate__animated wave-animation">Profile Summary</h2>
-          <ul class="carousel-description animate__animated zoom-animation">  
-            I am a Software Developer and Corporate Technical Trainer with 14+ years in IT, driven by a passion for development and teaching. I stay at the forefront of industry trends to empower individuals and organizations in their pursuit of technological excellence.
-            Throughout my career, I have developed innovative training tools to ensure effective knowledge transfer, delivering technical training to over 10,000 professionals through structured, instructor-led programs. I take pride in helping candidates build skills to achieve their goals. Additionally, I have developed and deployed 40+ software projects, demonstrating my expertise in web and Android application development.</ul>
-          <a href="https://api.whatsapp.com/send/?phone=910000000000&text=Hi%2CI%20got%20your%20number%20from%20your%20portfolio%20page&app_absent=0" class="btn-get-started scrollto">Contact Now</a>
-
-        </div>
+    <!-- About Section -->
+  <section id="about" class="about">
+    <div class="section-title">
+      <!-- <h2>About</h2> -->
+      <!-- <p>Who I am</p> -->
+    </div>
+    <div class="row">
+      <div class="col-lg-6 about-text">
+        <p style="text-align: justify;">
+          Hello, I’m Anirudha Anil Gaikwad, a Software Developer and Freelance 
+          Technical Trainer with over 14 years of industry experience.<br> 
+          I am passionate about blending software development with education to create 
+          impactful, application-focused learning experiences that bridge the gap 
+          between academia and industry.<br> 
+          My mission is to empower professionals and students with practical, 
+          job-ready skills aligned with today’s tech demands, while contributing to 
+          Atmanirbhar Bharat by inspiring learners to build systems that foster 
+          India’s technological independence.<br>
+ My strong academic foundation enables me to simplify complex technical concepts, 
+ making them accessible to learners at all levels.<br>
+ With nearly 14 years of experience, 
+ I have worked as an Android Developer at Ojaswi Technologies, leading over 40 software projects from planning to deployment, specializing in web and Android application development. As a System Analyst , I managed IT systems and ensured academic compliance for AICTE, NAAC, and UGC.<br>
+ My dual expertise in software development and education equips me to address skill gaps 
+and deliver training that meets industry standards.
+        </p>
       </div>
-    </div> -->
-
-    <div class="carousel-item active">
-      <div class="carousel-container">
-        <!-- Text Content -->
-        <div class="carousel-text">
-          <h4 class="carousel-title animate__animated wave-animation">Software Development</h4>
-          <ul class="carousel-description animate__animated zoom-animation">
-            <li>I have expertise in developing software solutions using various programming languages such as Python, Java, and Rust. I am experienced in web development, mobile app development (including Android), and have knowledge of frameworks like Django, Rocket and Spring boot.</li>
+      <div class="col-lg-6 about-text">
+        <p style="text-align: justify;">
+As a Freelance Technical Trainer for over 4 years and 7 months, 
+delivered 66 training sessions across institutions like Symbiosis Skills & 
+Professional University, Chitkara University, Parul University, 
+and companies such as ByteXL TechEd, Aspiring Careers LLP, TechnoWings Pvt. Ltd., 
+and Zensar.<br> 
+I specialize in technologies including Cybersecurity, AI, Java Full Stack, Rust, Python, SQL-PLSQL, Android, and Advanced C, having trained over 5000 professionals and students.<br> 
+My training programs are designed to be interactive, incorporating industry best practices to ensure learners are job-ready.<br> 
+I thrive on mentoring individuals, guiding academic projects, and developing innovative, accessible training tools for effective knowledge transfer.<br>
+My work extends to managing training schedules, documentation, and corporate mentorship, ensuring alignment with both academic and industry requirements.<br>
+My passion for Atmanirbhar Bharat drives me to inspire students and professionals to create self-reliant tech solutions that contribute to India’s technological independence.<br>
+I am the author of multiple books,which reflect my commitment to sharing expertise and fostering skill development.
+      </div>
+    </div>
+    <div class="proficiency-section">
+      <h2 class="proficiency-title">Proficiency</h2>
+      <div class="skills-container">
+        <div class="skills-category">
+          <h3 class="skills-header">Programming Languages</h3>
+          <ul class="skills-list">
+            <li>Rust</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>SQL</li>
           </ul>
-          <a href="https://api.whatsapp.com/send/?phone=910000000000&text=Hi%2CI%20got%20your%20number%20from%20your%20portfolio%20page&app_absent=0" class="btn-get-started scrollto" target="_blank" rel="noopener noreferrer">Contact Now</a>
-
         </div>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <div class="carousel-container">
-        <!-- Text Content -->
-        <div class="carousel-text">
-          <h4 class="carousel-title animate__animated wave-animation">Teaching and Training</h4>
-          <ul class="carousel-description animate__animated zoom-animation">
-           <li>With my extensive experience as a corporate technical trainer, I possess strong instructional and presentation skills. I excel in designing training programs, creating learning materials, and delivering engaging and effective training sessions.</li> 
+        <div class="skills-category">
+          <h3 class="skills-header">Frameworks</h3>
+          <ul class="skills-list">
+            <li>Rocket</li>
+            <li>Spring Boot</li>
+            <li>Django</li>
+            <li>Flask</li>
           </ul>
-          <a href="https://api.whatsapp.com/send/?phone=910000000000&text=Hi%2CI%20got%20your%20number%20from%20your%20portfolio%20page&app_absent=0" class="btn-get-started scrollto" target="_blank" rel="noopener noreferrer">Contact Now</a>
-
         </div>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <div class="carousel-container">
-        <!-- Text Content -->
-        <div class="carousel-text">
-          <h4 class="carousel-title animate__animated wave-animation">Problem Solving</h4>
-          <ul class="carousel-description animate__animated zoom-animation">
-            <li>I am adept at analyzing complex problems and implementing efficient solutions. My logical thinking and troubleshooting abilities allow me to address software development challenges effectively.</li>
-            
+        <div class="skills-category">
+          <h3 class="skills-header">Other</h3>
+          <ul class="skills-list">
+            <li>Cybersecurity</li>
+            <li>Advanced Data Structures</li>
+            <li>AI-ML</li>
+            <li>Web Development</li>
+            <li>Android Development</li>
           </ul>
-          <a href="https://api.whatsapp.com/send/?phone=910000000000&text=Hi%2CI%20got%20your%20number%20from%20your%20portfolio%20page&app_absent=0" class="btn-get-started scrollto" target="_blank" rel="noopener noreferrer">Contact Now</a>
-
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="carousel-item">
-      <div class="carousel-container">
-        <!-- Text Content -->
-        <div class="carousel-text">
-          <h4 class="carousel-title animate__animated wave-animation">Project Management</h4>
-          <ul class="carousel-description animate__animated zoom-animation">
-            <li>I have experience in managing software projects from inception to completion. This includes requirements gathering, planning, resource allocation, and ensuring timely delivery while maintaining quality standards.</li>          
-            
-          </ul>
-          <a href="https://api.whatsapp.com/send/?phone=910000000000&text=Hi%2CI%20got%20your%20number%20from%20your%20portfolio%20page&app_absent=0" class="btn-get-started scrollto" target="_blank" rel="noopener noreferrer">Contact Now</a>
-
-        </div>
-      </div>
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="section-title">
+      <!-- <h2>Services</h2> -->
+      <p>What I Offer</p>
     </div>
-
-    <div class="carousel-item">
-      <div class="carousel-container">
-        <!-- Text Content -->
-        <div class="carousel-text">
-          <h4 class="carousel-title animate__animated wave-animation">Adaptability</h4>
-          <ul class="carousel-description animate__animated zoom-animation">
-            <li>I am adaptable and can quickly adjust to new technologies, frameworks, and project requirements. I am open to learning and embracing new tools and methodologies to enhance productivity and efficiency.</li>             
-          </ul>
-          <a href="https://api.whatsapp.com/send/?phone=910000000000&text=Hi%2CI%20got%20your%20number%20from%20your%20portfolio%20page&app_absent=0" class="btn-get-started scrollto" target="_blank" rel="noopener noreferrer">Contact Now</a>
-
-        </div>
-      </div>
-    </div>
-
-
-    <div class="carousel-item">
-      <div class="carousel-container">
-        <!-- Text Content -->
-        <div class="carousel-text">
-          <h4 class="carousel-title animate__animated wave-animation">Analytical Thinking</h4>
-          <ul class="carousel-description animate__animated zoom-animation">
-            <li>I possess strong analytical skills, allowing me to dissect problems, evaluate options, and make informed decisions. I am capable of gathering and interpreting data to drive effective solutions.
-            </li>          
-            
-          </ul>
-          <a href="https://api.whatsapp.com/send/?phone=910000000000&text=Hi%2CI%20got%20your%20number%20from%20your%20portfolio%20page&app_absent=0" class="btn-get-started scrollto" target="_blank" rel="noopener noreferrer">Contact Now</a>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <div class="carousel-container">
-        <!-- Text Content -->
-        <div class="carousel-text">
-          <h4 class="carousel-title animate__animated wave-animation">Collaboration</h4>
-          <ul class="carousel-description animate__animated zoom-animation">
-            <li>I am a team player and thrive in collaborative environments. I can work effectively in cross-functional teams, contribute ideas, and collaborate with colleagues to achieve shared goals.
-
-            </li>          
-            
-          </ul>
-          <a href="https://api.whatsapp.com/send/?phone=910000000000&text=Hi%2CI%20got%20your%20number%20from%20your%20portfolio%20page&app_absent=0" class="btn-get-started scrollto" target="_blank" rel="noopener noreferrer">Contact Now</a>
-
-        </div>
-      </div>
-    </div>
-
-    
-    <div class="carousel-item">
-      <div class="carousel-container">
-        <!-- Text Content -->
-        <div class="carousel-text">
-          <h4 class="carousel-title animate__animated wave-animation">Attention to Detail</h4>
-          <ul class="carousel-description animate__animated zoom-animation">
-            <li>I pay close attention to detail in both software development and training activities, ensuring accuracy and quality in my work.
-
-            </li>          
-            
-          </ul>
-          <a href="https://api.whatsapp.com/send/?phone=910000000000&text=Hi%2CI%20got%20your%20number%20from%20your%20portfolio%20page&app_absent=0" class="btn-get-started scrollto" target="_blank" rel="noopener noreferrer">Contact Now</a>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <div class="carousel-container">
-        <!-- Text Content -->
-        <div class="carousel-text">
-          <h4 class="carousel-title animate__animated wave-animation">Continuous Learning</h4>
-          <ul class="carousel-description animate__animated zoom-animation">
-            <li>I have a passion for continuous learning and staying updated with the latest industry trends, technologies, and best practices. I actively seek opportunities to expand my knowledge and skillset.
-            </li>          
-            
-          </ul>
-          <a href="https://api.whatsapp.com/send/?phone=910000000000&text=Hi%2CI%20got%20your%20number%20from%20your%20portfolio%20page&app_absent=0" class="btn-get-started scrollto" target="_blank" rel="noopener noreferrer">Contact Now</a>
-
-        </div>
-      </div>
-    </div>
-    <!-- Additional Slides Here -->
-  
-    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
-    </a>
-    <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-      <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
-    </a>
-
-  </div>
-  
-  <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
-    <defs>
-      <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
-    </defs>
-    <g class="wave1"><use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)"></use></g>
-    <g class="wave2"><use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)"></use></g>
-    <g class="wave3"><use xlink:href="#wave-path" x="50" y="9" fill="#fff"></use></g>
-  </svg>
-
-</section>
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title" data-aos="zoom-out">
-          <h2>About</h2>
-          <p>Who I am</p>
-        </div>
-        <div class="row content" data-aos="fade-up">
-          <div class="col-lg-6">
-            <p style="text-align: justify;">
-              <!-- I am a Software Developer and Freelance Corporate Technical Trainer with over 14+ years of industry experience. Passionate about software development and teaching, I continuously strive to stay updated with the latest industry trends and technologies to empower individuals and organizations in their pursuit of technological excellence.
-              Throughout my career, I have developed innovative and accessible training tools and logistics to ensure effective knowledge transfer to my students. I have provided technical training to professionals, organized instructor-led programs, and managed training schedules and documentation.
-              My offerings include academic project guidance, corporate mentorship, and professional development training tailored to bridge the gap between theoretical knowledge and practical application.
-My passion lies in empowering individuals and organizations by delivering innovative solutions, fostering skill development, and aligning technology with real-world needs. I thrive on helping students and professionals excel, whether by guiding them through challenging academic projects or managing software development initiatives that meet industry demands.
-              Having delivered training to over 10,000 candidates, I take pride in nurturing their skills and helping them achieve their professional goals. Additionally, I have successfully developed and deployed over 40 software projects, showcasing my expertise in web and Android application development.
-              I am a key contributor to web and Android application development at Bodhi Technology, a company specializing in customized client solutions.  <a href="https://bodhi-tech.web.app/" target="_blank" rel="noopener noreferrer"> You can explore some of my work and projects at Bodhi Technology by visiting their website </a>.             
-             -->
-              I am a Software Developer and Freelance Corporate Technical Trainer with over 14+ years of industry experience. <br>Passionate about software development and teaching, I continuously stay updated with the latest trends and technologies to empower individuals and organizations in achieving technological excellence.
-<br>
-Throughout my career, I have developed innovative and accessible training tools to ensure effective knowledge transfer. <br>I have delivered technical training to professionals, organized instructor-led programs, and managed training schedules and documentation.
-<br>
-My offerings include academic project guidance, corporate mentorship, and professional development training designed to bridge the gap between theory and practical application.<br> I thrive on empowering individuals through skill development, guiding academic projects, and managing software development initiatives that meet industry demands.
-<br>
-Having trained over 10,000 candidates, I take pride in nurturing their skills and helping them achieve their professional goals.<br> Additionally, I have successfully developed and deployed 40+ software projects, showcasing my expertise in web and Android application development.
-
-            </p>
-
-            
-            
-          </div>
-
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <div class="proficiency-section">
-              <h2 class="proficiency-title">Proficiency</h2>
-            
-              <!-- Skills Container for 3 Columns -->
-              <div class="skills-container">
-                <!-- Programming Languages -->
-                <div class="skills-category">
-                  <h3 class="skills-header">Programming Languages</h3>
-                  <ul class="skills-list">
-                    <li><i class="ri-check-double-line"></i> Rust</li>
-                    <li><i class="ri-check-double-line"></i> Java</li>
-                    <li><i class="ri-check-double-line"></i> Python</li>
-                    <li><i class="ri-check-double-line"></i> SQL</li>
-                  </ul>
-                </div>
-            
-                <!-- Frameworks -->
-                <div class="skills-category">
-                  <h3 class="skills-header">Frameworks</h3>
-                  <ul class="skills-list">
-                    <li><i class="ri-check-double-line"></i> Rocket</li>
-                    <li><i class="ri-check-double-line"></i>Spring Boot </li>
-                    <li><i class="ri-check-double-line"></i> Django</li>
-                    <li><i class="ri-check-double-line"></i>Flask </li>
-                  </ul>
-                </div>
-            
-                <!-- Other Skills -->
-                <div class="skills-category">
-                  <h3 class="skills-header">Other</h3>
-                  <ul class="skills-list">
-                    <li><i class="ri-check-double-line"></i> Advanced Data Structures</li>
-                    <li><i class="ri-check-double-line"></i> AI-ML</li>
-                    <li><i class="ri-check-double-line"></i> Web Development</li>
-                    <li><i class="ri-check-double-line"></i> Android Development</li>
-                  </ul>
-                </div>
-              </div>
-            
-              <!-- Operating System Section -->
-              <div class="operating-system-section">
-                <h3 class="skills-header" data-bs-toggle="collapse" data-bs-target="#osList" aria-expanded="false" aria-controls="osList">
-                  Operating Systems <span class="collapse-indicator">+</span>
-                </h3>
-            
-                <div id="osList" class="collapse">
-                  <ul class="skills-list">
-                    <li><i class="ri-check-double-line"></i> Linux</li>
-                    <li><i class="ri-check-double-line"></i> Windows</li>
-                    <li><i class="ri-check-double-line"></i> FreeBSD</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            
-
-
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-
-<!-- ======= Services Section ======= -->
-<section id="services" class="about">
-  <div class="container">
-    <div class="section-title" data-aos="zoom-out">
-      <h2>Services</h2>
-       <p>What I Offer</p> 
-    </div>
-
-    <div class="row content" data-aos="fade-up">
-      <!-- Left Side: Skills and Expertise -->
+    <div class="row">
       <div class="col-lg-6">
-        <h3>Service Offerings</h3>
         <div class="services-list">
           <div class="service-item">
-            <h4><i class="bi bi-palette"></i> Academic Training & Mentorship
-            </h4>
-            <p style="text-align: justify;">With extensive experience as a technical trainer, I excel in designing and delivering effective training programs that help students achieve their professional goals. My strengths include creating engaging learning materials, conducting interactive sessions, and fostering a supportive learning environment to empower students with practical skills and knowledge
-            </p>
-          </div>
-       
-          <div class="service-item">
-            <h4><i class="bi bi-palette"></i>Consultation & Project Management-Planning</h4>
-            <p style="text-align: justify;">Offering consultation on tech stacks, project scoping, and efficient coding practices. With experience across Android, web development, and backend systems, I provide insights to optimize your project from start to deployed.
-            </p>
+            <h4><i class="bx bx-palette"></i> Academic Training & Mentorship</h4>
+            <p style="text-align: justify;">With extensive experience as a technical trainer, I excel in designing and delivering effective training programs that help students achieve their professional goals. My strengths include creating engaging learning materials, conducting interactive sessions, and fostering a supportive learning environment to empower students with practical skills and knowledge.</p>
           </div>
           <div class="service-item">
-            <h4><i class="bi bi-palette"></i>Academic Documentation and Compliance</h4>
-            <p style="text-align: justify;">Specialized in preparing and managing documentation for AICTE, DTE,NAAC and UGC requirements. With a deep understanding of compliance standards, I ensure accurate and timely submissions, handling everything from initial applications to annual reporting for educational institutions. My experience helps institutions streamline their processes, reduce errors, and stay aligned with regulatory expectations.
-            </p>
+            <h4><i class="bx bx-palette"></i> Consultation & Project Management-Planning</h4>
+            <p style="text-align: justify;">Providing expert consultation and project management for setting up edutech companies and Section 8 organizations, ensuring efficient planning, resource allocation, and execution aligned with organizational goals.</p>
           </div>
-
-
           <div class="service-item">
-            <h4><i class="bi bi-palette"></i> Corporate Technical Training & Mentorship
-            </h4>
-            <p style="text-align: justify;">Conducting Corporate workshops or one-on-one sessions in Rust,Java,Android,Python,web development and backend technologies. I help new developers understand best practices, get comfortable with code structure, and gain confidence in their skills.
-            </p>
+            <h4><i class="bx bx-palette"></i> Academic Documentation and Compliance</h4>
+            <p style="text-align: justify;">Specialized in preparing and managing documentation for AICTE, DTE, NAAC, and UGC requirements. With a deep understanding of compliance standards, I ensure accurate and timely submissions, handling everything from initial applications to annual reporting for educational institutions.</p>
           </div>
-      
-          
           <div class="service-item">
-            <h4><i class="bi bi-lightbulb"></i> Problem Solving</h4>
+            <h4><i class="bx bx-palette"></i> Corporate Technical Training & Mentorship</h4>
+            <p style="text-align: justify;">Conducting corporate workshops or one-on-one sessions in Rust, Java, Android, Python, web development, and backend technologies. I help new developers understand best practices, get comfortable with code structure, and gain confidence in their skills.</p>
+          </div>
+          <div class="service-item">
+            <h4><i class="bx bx-lightbulb"></i> Research & Development</h4>
+            <p style="text-align: justify;">Driving innovation through research and development in software solutions, focusing on cutting-edge technologies and methodologies.</p>
+          </div>
+          <div class="service-item">
+            <h4><i class="bx bx-lightbulb"></i> Problem Solving</h4>
             <p style="text-align: justify;">Skilled in analyzing complex problems and implementing efficient solutions, excelling in logical thinking and troubleshooting.</p>
           </div>
         </div>
       </div>
-
-      <!-- Right Side: Services -->
-      <div class="col-lg-6 pt-4 pt-lg-0">
-        <h3>Service Offerings</h3>
+      <div class="col-lg-6">
         <div class="services-list">
           <div class="service-item">
-            <h4><i class="bi bi-palette"></i>Industry and Academic Project Guidance</h4>
-            <p style="text-align: justify;">I offer comprehensive guidance for both industry and academic projects, leveraging my extensive experience in software development and training. My services include assistance with project planning, design, development, and deployment, ensuring alignment with best practices and modern technologies. Whether you're a professional looking for support with complex industry projects or a student seeking mentorship for academic endeavors, I provide tailored solutions to help you achieve your goals efficiently and effectively.
-            </p>
+            <h4><i class="bx bx-palette"></i> Industry and Academic Project Guidance</h4>
+            <p style="text-align: justify;">I offer comprehensive guidance for both industry and academic projects, leveraging my extensive experience in software development and training. My services include assistance with project planning, design, development, and deployment, ensuring alignment with best practices and modern technologies.</p>
           </div>
           <div class="service-item">
-            <h4><i class="bi bi-phone"></i> Android App Development</h4>
+            <h4><i class="bx bx-phone"></i> Android App Development</h4>
             <p style="text-align: justify;">Develop high-quality, user-friendly Android applications with Kotlin, ensuring responsive design and smooth performance.</p>
           </div>
           <div class="service-item">
-            <h4><i class="bi bi-window-sidebar"></i> Web Development</h4>
+            <h4><i class="bx bx-window"></i> Web Development</h4>
             <p style="text-align: justify;">Create modern, responsive websites using Java, Jakarta EE, and Thymeleaf, from landing pages to complete applications.</p>
           </div>
           <div class="service-item">
-            <h4><i class="bi bi-server"></i> Backend Development</h4>
+            <h4><i class="bx bx-server"></i> Backend Development</h4>
             <p style="text-align: justify;">Build robust backend systems with Rust/Spring Boot, Hibernate, and JPA, specializing in APIs, session management, and secure authentication.</p>
           </div>
           <div class="service-item">
-            <h4><i class="bi bi-palette"></i> UI/UX Design</h4>
+            <h4><i class="bx bx-palette"></i> UI/UX Design</h4>
             <p style="text-align: justify;">Design intuitive, user-centered interfaces for both Android and web, enhancing user experience with a clean design approach.</p>
           </div>
           <div class="service-item">
-            <h4><i class="bi bi-palette"></i> API Development & Integration</h4>
-            <p style="text-align: justify;">Developing and integrating RESTful APIs for seamless communication between front-end and back-end systems. I ensure secure, scalable, and efficient APIs that enable smooth data exchange and interoperability.
-            </p>
+            <h4><i class="bx bx-palette"></i> API Development & Integration</h4>
+            <p style="text-align: justify;">Developing and integrating RESTful APIs for seamless communication between front-end and back-end systems, ensuring secure and scalable solutions.</p>
           </div>
           <div class="service-item">
-            <h4><i class="bi bi-server"></i> Database Management</h4>
+            <h4><i class="bx bx-server"></i> Database Management</h4>
             <p style="text-align: justify;">Manage MySQL and PostgreSQL databases, handling CRUD operations and data security for reliable data storage and retrieval.</p>
           </div>
-       
         </div>
       </div>
     </div>
-  </div>
-</section><!-- End Services Section -->
+  </section>
 
-
-
-    <!-- ======= Services Section ======= -->
-
-    
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Gallary</h2>
-          <p>What I've done</p>
-        </div>
-
-   
-
-        <div class="row portfolio-container" data-aos="fade-up">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/PDEA_Manjari_19Apr25.jpg" loading="lazy" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <!-- <h4>Web 3</h4>
-              <p>Web</p> -->
-              <a href="assets/img/portfolio/PDEA_Manjari_19Apr25.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="
-              Pune District Education Association's College of Engineering, Manjari,Pune,Maharashtra
-              "><i class="bx bx-plus"></i></a>
-              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
-            </div>
-          </div> 
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/AVCOE1.jpg" loading="lazy" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <!-- <h4>Web 3</h4>
-              <p>Web</p> -->
-              <a href="assets/img/portfolio/AVCOE1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Amrutvahini College of Engineering,Sangamner,Ahamadnagar"><i class="bx bx-plus"></i></a>
-              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/PDEA_Manjari_18Apr25.jpg" loading="lazy" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <!-- <h4>Web 3</h4>
-              <p>Web</p> -->
-              <a href="assets/img/portfolio/PDEA_Manjari_18Apr25.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="
-              Pune District Education Association's College of Engineering, Manjari,Pune,Maharashtra
-              "><i class="bx bx-plus"></i></a>
-              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
-            </div>
-          </div> 
-          
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/baramati3.jpg" loading="lazy" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <!-- <h4>Web 3</h4>
-              <p>Web</p> -->
-              <a href="assets/img/portfolio/baramati3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="
-              Tuljaram Chaturchand College
-              College in Baramati, Maharashtra
-              "><i class="bx bx-plus"></i></a>
-              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
-            </div>
-          </div>   
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/shinhgad2.jpg" loading="lazy" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <!-- <h4>Web 3</h4>
-              <p>Web</p> -->
-              <a href="assets/img/portfolio/shinhgad2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="
-              SIT Sinhgad Institute Of Technology Lonavala, Maharashtra
-              "><i class="bx bx-plus"></i></a>
-              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
-            </div>
-          </div>  
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/vairag.jpg" loading="lazy" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <!-- <h4>Web 3</h4>
-              <p>Web</p> -->
-              <a href="assets/img/portfolio/vairag.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Balsanskar Kendra, Vairag"><i class="bx bx-plus"></i></a>
-              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/parul1.jpg" loading="lazy" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <!-- <h4>Web 3</h4>
-              <p>Web</p> -->
-              <a href="assets/img/portfolio/parul1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Parul University,Gujarat"><i class="bx bx-plus"></i></a>
-              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/chitkara1.jpg" loading="lazy" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <!-- <h4>App 2</h4>
-              <p>App</p> -->
-              <a href="assets/img/portfolio/chitkara1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Chitkara University,Punjab"><i class="bx bx-plus"></i></a>
-              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
-            </div>
-          </div>
-
-
-          
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/bitm1.jpg" loading="lazy" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <!-- <h4>Web 3</h4>
-              <p>Web</p> -->
-              <a href="assets/img/portfolio/bitm1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ballari Institute of Technology & Managemnt,Bellari,Karnatak"><i class="bx bx-plus"></i></a>
-              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
-            </div>
-          </div>
-
-         
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/chitkara3.jpg" loading="lazy" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <!-- <h4>Web 2</h4>
-              <p>Web</p> -->
-              <a href="assets/img/portfolio/chitkara3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Chitkara University,Punjab"><i class="bx bx-plus"></i></a>
-              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/karmayogi1.jpg" loading="lazy" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <!-- <h4>App 3</h4>
-              <p>App</p> -->
-              <a href="assets/img/portfolio/karmayogi1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="
-              Karmayogi Institute of Technology
-              College,Shelve, Maharashtra
-              "><i class="bx bx-plus"></i></a>
-              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/parul2.jpg" loading="lazy" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <!-- <h4>App 1</h4>
-              <p>App</p> -->
-              <a href="assets/img/portfolio/parul2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Parul University,Gujarat "><i class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/lamboti.jpg" loading="lazy" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <!-- <h4>Card 1</h4>
-              <p>Card</p> -->
-              <a href="assets/img/portfolio/lamboti.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Balsanskar Kendra, Lomboti"><i class="bx bx-plus"></i></a>
-              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/lamboti2.jpg" loading="lazy" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <!-- <h4>Card 3</h4>
-              <p>Card</p> -->
-              <a href="assets/img/portfolio/lamboti2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Balsanskar Kendra, Lomboti"><i class="bx bx-plus"></i></a>
-              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
-            </div>
-          </div>
-
-       
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/vishnuUni1.jpg" loading="lazy" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <!-- <h4>Web 3</h4>
-              <p>Web</p> -->
-              <a href="assets/img/portfolio/vishnuUni1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Shri Vishnu Engineering College for Women,Bhimavaram"><i class="bx bx-plus"></i></a>
-              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
-            </div>
-          </div>
-
-
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/bitm2.jpg" loading="lazy" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <!-- <h4>Web 3</h4>
-              <p>Web</p> -->
-              <a href="assets/img/portfolio/bitm2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ballari Institute of Technology & Managemnt,Bellari,Karnatak"><i class="bx bx-plus"></i></a>
-              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
-            </div>
-          </div>
-           
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-      <div class="container">
-
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Testimonials</h2>
-          <p>What they are saying about me</p>
-        </div>
-
-        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Anirudha Gaikwad Sir is a skilled and polite trainer who brings deep knowledge to their sessions. They explain the ""why"" behind each concept, making it easier to understand. Their focus on hands-on practice helps us apply what we learn right away. Overall, their teaching style makes learning enjoyable and effective.
-Also they identify the capabilities of students and give right direction to learn.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <!-- <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Arif Pathan</h3>
-                <h4>Barshi</h4> -->
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Sir you have a great quality which is your knowledge and your teaching are correlation was a wonderful.And this quality helps many students to learn, Understand and to implement their knowledge into the applications. Finally I would like to say teaching and knowledge has different parts but you have best combination of both.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <!-- <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt=""> -->
-                  </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Mr. Aniruddha possesses a strong command over the subject matter, ensuring clear and accurate explanations. He provide relevant real-world examples that help clarify complex concepts.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <!-- <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=""> -->
-             
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  The technical training delivered by Anirudh Sir was highly effective. He presented complex topics in a simple, understandable manner and engaged the participants well throughout the session. His expertise and clear explanations made the concepts easier to grasp, and the hands-on exercises were particularly useful. Overall, a well-conducted session, with room for more interaction on advanced topics.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <!-- <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt=""> -->
-                
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  From what I’ve experienced, you’re dedicated and skilled in development especially with Java and Android. You approach projects with both detail and innovation, like integrating Firebase and handling complex permissions. Your persistence in overcoming challenges, especially in Android Studio, reflects your commitment to mastering development tools and delivering efficient solutions. A driven and resourceful.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <!-- <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=""> -->
-              
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section><!-- End Testimonials Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <h3> Anirudha Anil Gaikwad </h3>
-      <h5><i class="bx bxs-send"></i>&nbsp;gaikwad.anirudha@gmail.com </h5><br>
-      <p>Thanks for Connecting with me <br>
-        
-         </p>
-      <div class="social-links">
-        <a href="https://twitter.com/" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="https://www.facebook.com/" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="https://www.instagram.com/" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://www.youtube.com/" class="google-plus"><i class="bx bxl-youtube"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://api.whatsapp.com/send/?phone=910000000000&text=Hi%2CI%20got%20your%20number%20from%20your%20portfolio%20page&app_absent=0" class="whatsapp" target="_blank" rel="noopener noreferrer"><i class="bx bxl-whatsapp"></i></a>
-
-      </div>
-      <div class="copyright">
-        &copy; Copyright <script>document.write(new Date().getFullYear());</script>&nbsp;<strong><span> Anirudha Anil Gaikwad </span></strong>. All Rights Reserved
-      </div>
- 
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <div class="section-title">
+      <!-- <h2>Gallery</h2> -->
+      <p>What I've Done</p>
     </div>
-  </footer><!-- End Footer -->
+    <div class="portfolio-container">
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/PDEA_Manjari_19Apr25.jpg" alt="PDEA Manjari" loading="lazy">
+        <div class="portfolio-info">
+          <a href="assets/img/portfolio/PDEA_Manjari_19Apr25.jpg">PDEA College of Engineering, Manjari, Pune</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/AVCOE1.jpg" alt="AVCOE" loading="lazy">
+        <div class="portfolio-info">
+          <a href="assets/img/portfolio/AVCOE1.jpg">Amrutvahini College of Engineering, Sangamner</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/PDEA_Manjari_18Apr25.jpg" alt="PDEA Manjari" loading="lazy">
+        <div class="portfolio-info">
+          <a href="assets/img/portfolio/PDEA_Manjari_18Apr25.jpg">PDEA College of Engineering, Manjari, Pune</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/baramati3.jpg" alt="Baramati" loading="lazy">
+        <div class="portfolio-info">
+          <a href="assets/img/portfolio/baramati3.jpg">Tuljaram Chaturchand College, Baramati</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/shinhgad2.jpg" alt="Sinhgad" loading="lazy">
+        <div class="portfolio-info">
+          <a href="assets/img/portfolio/shinhgad2.jpg">SIT Sinhgad Institute Of Technology, Lonavala</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/vairag.jpg" alt="Vairag" loading="lazy">
+        <div class="portfolio-info">
+          <a href="assets/img/portfolio/vairag.jpg">Balsanskar Kendra, Vairag</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/parul1.jpg" alt="Parul" loading="lazy">
+        <div class="portfolio-info">
+          <a href="assets/img/portfolio/parul1.jpg">Parul University, Gujarat</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/chitkara1.jpg" alt="Chitkara" loading="lazy">
+        <div class="portfolio-info">
+          <a href="assets/img/portfolio/chitkara1.jpg">Chitkara University, Punjab</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/bitm1.jpg" alt="BITM" loading="lazy">
+        <div class="portfolio-info">
+          <a href="assets/img/portfolio/bitm1.jpg">Ballari Institute of Technology & Management, Bellari</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/chitkara3.jpg" alt="Chitkara" loading="lazy">
+        <div class="portfolio-info">
+          <a href="assets/img/portfolio/chitkara3.jpg">Chitkara University, Punjab</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/karmayogi1.jpg" alt="Karmayogi" loading="lazy">
+        <div class="portfolio-info">
+          <a href="assets/img/portfolio/karmayogi1.jpg">Karmayogi Institute of Technology, Shelve</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/parul2.jpg" alt="Parul" loading="lazy">
+        <div class="portfolio-info">
+          <a href="assets/img/portfolio/parul2.jpg">Parul University, Gujarat</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/lamboti.jpg" alt="Lamboti" loading="lazy">
+        <div class="portfolio-info">
+          <a href="assets/img/portfolio/lamboti.jpg">Balsanskar Kendra, Lomboti</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/lamboti2.jpg" alt="Lamboti" loading="lazy">
+        <div class="portfolio-info">
+          <a href="assets/img/portfolio/lamboti2.jpg">Balsanskar Kendra, Lomboti</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/vishnuUni1.jpg" alt="Vishnu" loading="lazy">
+        <div class="portfolio-info">
+          <a href="assets/img/portfolio/vishnuUni1.jpg">Shri Vishnu Engineering College for Women, Bhimavaram</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/bitm2.jpg" alt="BITM" loading="lazy">
+        <div class="portfolio-info">
+          <a href="assets/img/portfolio/bitm2.jpg">Ballari Institute of Technology & Management, Bellari</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" rel="noopener noreferrer"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Testimonials Section -->
+  <section id="testimonials">
+    <div class="section-title">
+      <!-- <h2>Testimonials</h2> -->
+      <p>What They Say About Me</p>
+    </div>
+    <div class="testimonials-slider">
+      <div class="testimonial-item">
+        <p><i class="bx bxs-quote-alt-left"></i> Anirudha Gaikwad Sir is a skilled and polite trainer who brings deep knowledge to their sessions. They explain the "why" behind each concept, making it easier to understand. Their focus on hands-on practice helps us apply what we learn right away. Overall, their teaching style makes learning enjoyable and effective. Also, they identify the capabilities of students and give the right direction to learn. <i class="bx bxs-quote-alt-right"></i></p>
+      </div>
+      <div class="testimonial-item">
+        <p><i class="bx bxs-quote-alt-left"></i> Sir, you have a great quality which is your knowledge and your teaching are correlation was a wonderful. And this quality helps many students to learn, understand, and implement their knowledge into applications. Finally, I would like to say teaching and knowledge have different parts but you have the best combination of both. <i class="bx bxs-quote-alt-right"></i></p>
+      </div>
+      <div class="testimonial-item">
+        <p><i class="bx bxs-quote-alt-left"></i> Mr. Aniruddha possesses a strong command over the subject matter, ensuring clear and accurate explanations. He provides relevant real-world examples that help clarify complex concepts. <i class="bx bxs-quote-alt-right"></i></p>
+      </div>
+      <div class="testimonial-item">
+        <p><i class="bx bxs-quote-alt-left"></i> The technical training delivered by Anirudh Sir was highly effective. He presented complex topics in a simple, understandable manner and engaged the participants well throughout the session. His expertise and clear explanations made the concepts easier to grasp, and the hands-on exercises were particularly useful. <i class="bx bxs-quote-alt-right"></i></p>
+      </div>
+      <div class="testimonial-item">
+        <p><i class="bx bxs-quote-alt-left"></i> From what I’ve experienced, you’re dedicated and skilled in development especially with Java and Android. You approach projects with both detail and innovation, like integrating Firebase and handling complex permissions. Your persistence in overcoming challenges reflects your commitment to delivering efficient solutions. <i class="bx bxs-quote-alt-right"></i></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <h3>Anirudha Anil Gaikwad</h3>
+    <h5><i class="bx bxs-send"></i> gaikwad.anirudha@gmail.com</h5>
+    <p>Thanks for connecting with me!</p>
+    <div class="social-links">
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="bx bxl-twitter"></i></a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="bx bxl-facebook"></i></a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="bx bxl-instagram"></i></a>
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="bx bxl-youtube"></i></a>
+      <a href="https://api.whatsapp.com/send/?phone=910000000000&text=Hi%2CI%20got%20your%20number%20from%20your%20portfolio%20page&app_absent=0" target="_blank" rel="noopener noreferrer"><i class="bx bxl-whatsapp"></i></a>
+    </div>
+    <div class="copyright">
+      &copy; <script>document.write(new Date().getFullYear());</script> Anirudha Anil Gaikwad. All Rights Reserved
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
 
   <script>
-    window.onbeforeunload = function () {
-      window.scrollTo(0, 0);
-    };
+    // Mobile nav toggle
+    document.querySelector('.mobile-nav-toggle').addEventListener('click', () => {
+      document.querySelector('nav ul').classList.toggle('active');
+    });
+
+    // Scroll to top on page load
+    window.onbeforeunload = () => window.scrollTo(0, 0);
+
+    // Testimonials auto scroll
+    const testimonialsSlider = document.querySelector('.testimonials-slider');
+    const testimonialItems = document.querySelectorAll('.testimonial-item');
+    let currentIndex = 0;
+
+    function autoScrollTestimonials() {
+      if (testimonialItems.length === 0) return;
+      currentIndex = (currentIndex + 1) % testimonialItems.length;
+      const offset = testimonialItems[currentIndex].offsetLeft;
+      testimonialsSlider.scrollTo({
+        left: offset,
+        behavior: 'smooth'
+      });
+      // Reset to first item when reaching the end
+      if (currentIndex === testimonialItems.length - 1) {
+        setTimeout(() => {
+          testimonialsSlider.scrollTo({
+            left: 0,
+            behavior: 'smooth'
+          });
+          currentIndex = 0;
+        }, 3000); // Delay to show the last item before resetting
+      }
+    }
+
+    // Auto scroll every 4 seconds
+    setInterval(autoScrollTestimonials, 4000);
+
+    // Ensure manual scrolling still works
+    testimonialsSlider.addEventListener('scroll', () => {
+      clearInterval(autoScrollTestimonials);
+      setTimeout(() => setInterval(autoScrollTestimonials, 4000), 8000); // Pause auto-scroll for 8s on manual scroll
+    });
   </script>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>
