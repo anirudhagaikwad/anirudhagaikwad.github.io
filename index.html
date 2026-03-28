@@ -1,851 +1,3298 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Anirudha Anil Gaikwad">
-  <meta name="description" content="Software Developer and Corporate Technical Trainer with 14+ years in IT, passionate about development and teaching.">
-  <meta name="keywords" content="Freelancer,Software Developer,Corporate Technical Trainer,IT Industry Expert,Technology Training">
-  <meta property="og:title" content="Anirudha Anil Gaikwad - Software Developer & Trainer">
-  <meta property="og:description" content="Software Developer and Corporate Technical Trainer with 14+ years in IT, passionate about development and teaching.">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="600">
-  <meta property="og:image:height" content="600">
-  <meta property="og:url" content="https://anirudhagaikwad.github.io/">
-  <meta property="og:image" content="https://anirudhagaikwad.github.io/assets/img/logo/android-icon-96x96.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Anirudha Anil Gaikwad - Software Developer & Trainer">
-  <meta name="twitter:description" content="Software Developer and Corporate Technical Trainer with 14+ years in IT, passionate about development and teaching.empowering learners with modern, safe, and high-performance skills.">
-  <meta name="twitter:image" content="assets/img/logo/android-icon-96x96.png">
-  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
-  <title>Anirudha Anil Gaikwad</title>
-  <meta name="theme-color" content="#EEAECA">
-  <!-- Boxicons for icons -->
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
-  <style>
-    :root {
-      --primary-green: #EEAECA;
-      --primary-red: #94BBE9;
-      --hover-color: linear-gradient(135deg, #e0f7fa, #f3e5f5);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
-    }
-
-    body {
-      color: #333;
-      line-height: 1.6;
-      background: linear-gradient(135deg, var(--primary-green), var(--primary-red));
-    }
-
-    /* Header */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: linear-gradient(135deg, var(--primary-green), var(--primary-red));
-      padding: 10px 20px;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo img {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      margin-right: 10px;
-      loading: lazy;
-    }
-
-    .logo span {
-      color: #fff;
-      font-size: 1.2em;
-      font-weight: bold;
-      display: inline-block;
-      animation: wave-animation 2.5s ease-in-out infinite;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-    }
-
-    nav ul li {
-      margin-left: 20px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.9em;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: var(--hover-color);
-      animation: wave-animation 2.5s ease-in-out;
-    }
-
-    .mobile-nav-toggle {
-      display: none;
-      color: #fff;
-      font-size: 1.5em;
-      cursor: pointer;
-    }
-
-    /* Wave Animation */
-    @keyframes wave-animation {
-      0%, 100% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-      }
-      25% {
-        transform: translateY(-8px) scale(1.05);
-        opacity: 0.9;
-      }
-      50% {
-        transform: translateY(8px) scale(1);
-        opacity: 1;
-      }
-      75% {
-        transform: translateY(-8px) scale(1.05);
-        opacity: 0.9;
-      }
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    /* Hero Section (Books Card) */
-    #hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      padding: 100px 20px 40px;
-    }
-
-    /* Section General */
-    section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .section-title h2 {
-      font-size: 2em;
-      font-weight: bold;
-      color: #fff;
-    }
-
-    .section-title p {
-      color: #fff;
-      font-size: 1.1em;
-    }
-
-    /* About Section */
-    .about .row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      align-items: stretch;
-    }
-
-    .about .col-lg-6 {
-      flex: 1;
-      min-width: 300px;
-      display: flex;
-      align-items: stretch;
-      justify-content: center;
-    }
-
-    .about-text {
-      text-align: justify;
-      font-size: 1.1em;
-      color: #fff;
-      padding: 20px;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .about-text a {
-      color: var(--hover-color);
-      text-decoration: none;
-    }
-
-    .about-text a:hover {
-      text-decoration: underline;
-    }
-
-    .about-image {
-      display: flex;
-      align-items: stretch;
-      justify-content: center;
-      width: 100%;
-      padding: 20px;
-    }
-
-    .about-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 10px;
-      loading: lazy;
-    }
-
-    .proficiency-section {
-      background: linear-gradient(135deg, var(--primary-green), var(--primary-red));
-      padding: 20px;
-      border-radius: 10px;
-      color: #fff;
-      max-width: 1200px;
-      margin: 30px auto 0;
-    }
-
-    .proficiency-title {
-      font-size: 1.5em;
-      color: #fff;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .skills-container {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .skills-category {
-      flex: 1;
-      background: linear-gradient(135deg, #ffffff1b, #f5f5f5);
-      padding: 15px;
-      border-radius: 8px;
-    }
-
-    .skills-header {
-      font-size: 1.2em;
-      color: #fff;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    .skills-list {
-      list-style: none;
-    }
-
-    .skills-list li {
-      font-size: 1em;
-      padding: 5px 0;
-      display: flex;
-      align-items: center;
-      color: #fff;
-    }
-
-    .skills-list li::before {
-      content: "✔";
-      color: #7b14bf;
-      margin-right: 8px;
-    }
-
-    /* Services Section */
-    .services .row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .services .col-lg-6 {
-      flex: 1;
-      min-width: 300px;
-    }
-
-    .services-list {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .service-item {
-      padding: 15px;
-      background: #fff;
-      border-radius: 8px;
-      border-left: 4px solid #333;
-      transition: background 0.3s;
-    }
-
-    .service-item:hover {
-      background: #e8e8e8;
-    }
-
-    .service-item h4 {
-      font-size: 1.2em;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-    }
-
-    .service-item h4 i {
-      margin-right: 8px;
-      color: #007bff;
-    }
-
-    .service-item p {
-      font-size: 1em;
-      color: #333;
-      text-align: justify;
-    }
-
-    /* Portfolio Section */
-    .portfolio-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .portfolio-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      loading: lazy;
-    }
-
-    .portfolio-info {
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .portfolio-info a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1em;
-    }
-
-    /* Testimonials Section */
-    .testimonials-slider {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-      padding-bottom: 10px;
-    }
-
-    .testimonials-slider::-webkit-scrollbar {
-      height: 8px;
-    }
-
-    .testimonials-slider::-webkit-scrollbar-thumb {
-      background: var(--hover-color);
-      border-radius: 4px;
-    }
-
-    .testimonials-slider::-webkit-scrollbar-track {
-      background: #e8e8e8;
-    }
-
-    .testimonial-item {
-      flex: 0 0 300px;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      margin: 0 10px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      scroll-snap-align: start;
-    }
-
-    .testimonial-item p {
-      font-style: italic;
-      color: #666;
-      font-size: 0.95em;
-    }
-
-    /* Footer */
-    footer {
-      background: linear-gradient(135deg, var(--primary-green), var(--primary-red));
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .social-links a {
-      color: #fff;
-      margin: 0 10px;
-      font-size: 1.5em;
-      text-decoration: none;
-    }
-
-    .social-links a:hover {
-      color: var(--hover-color);
-    }
-
-    .copyright {
-      margin-top: 10px;
-    }
-
-    .back-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--hover-color);
-      color: #7b14bf;
-      padding: 10px;
-      border-radius: 50%;
-      text-decoration: none;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        background: linear-gradient(135deg, var(--primary-green), var(--primary-red));
-        padding: 20px;
-      }
-
-      nav ul.active {
-        display: flex;
-      }
-
-      .mobile-nav-toggle {
-        display: block;
-      }
-
-      .skills-container {
-        flex-direction: column;
-      }
-
-     
-      .testimonial-item {
-        flex: 0 0 250px;
-      }
-
-      .about .row {
-        flex-direction: column;
-      }
-
-      .about .col-lg-6 {
-        width: 100%;
-      }
-
-      .about-text {
-        max-width: 100%;
-        padding: 15px;
-      }
-
-      .about-image {
-        padding: 15px;
-      }
-
-      .about-image img {
-        width: 100%;
-        height: auto;
-        max-height: 300px;
-        object-fit: cover;
-      }
-
-      .proficiency-section {
-        max-width: 100%;
-      }
-    }
-
-    @media (min-width: 992px) {
-     
-    }
-
-    @media (min-width: 1200px) {
-     
-    }
-  </style>
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/img/logo/android-icon-192x192.png" alt="Anirudha Anil Gaikwad" loading="lazy">
-        <span>Anirudha Anil Gaikwad</span>
-      </a>
-    </div>
-    <nav>
-      <ul>
-        <!-- <li><a href="#hero">Home</a></li> -->
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Gallery</a></li>
-        <li><a class="nav-link scrollto" href="https://books-research.github.io/" target="_blank" rel="noopener noreferrer"> Books & Research </a> </li> 
-      </ul>
-      <i class="bx bx-menu mobile-nav-toggle"></i>
-    </nav>
-  </header>
-
-    <!-- About Section -->
-  <section id="about" class="about">
-    <div class="section-title">
-      <!-- <h2>About</h2> -->
-      <!-- <p>Who I am</p> -->
-    </div>
-    <div class="row">
-      <div class="col-lg-6 about-text">
-        <p style="text-align: justify;">
-          Hello, I’m Anirudha Anil Gaikwad, a Software Developer and Freelance 
-          Technical Trainer with over 14 years of industry experience.<br> 
-          I am passionate about blending software development with education to create 
-          impactful, application-focused learning experiences that bridge the gap 
-          between academia and industry.<br> 
-          My mission is to empower professionals and students with practical, 
-          job-ready skills aligned with today’s tech demands, while contributing to 
-          Atmanirbhar Bharat by inspiring learners to build systems that foster 
-          India’s technological independence.<br>
- My strong academic foundation enables me to simplify complex technical concepts, 
- making them accessible to learners at all levels.<br>
- With nearly 14 years of experience, 
- I have worked as an Android Developer at Ojaswi Technologies, leading over 40 software projects from planning to deployment, specializing in web and Android application development. As a System Analyst , I managed IT systems and ensured academic compliance for AICTE, NAAC, and UGC.<br>
- My dual expertise in software development and education equips me to address skill gaps 
-and deliver training that meets industry standards.
-        </p>
-      </div>
-      <div class="col-lg-6 about-text">
-        <p style="text-align: justify;">
-As a Freelance Technical Trainer for over 4 years and 7 months, 
-delivered 66 training sessions across institutions like Symbiosis Skills & 
-Professional University, Chitkara University, Parul University, 
-and companies such as ByteXL TechEd, Aspiring Careers LLP, TechnoWings Pvt. Ltd., 
-and Zensar.<br> 
-I specialize in technologies including Cybersecurity, AI, Java Full Stack, Rust, Python, SQL-PLSQL, Android, and Advanced C, having trained over 5000 professionals and students.<br> 
-My training programs are designed to be interactive, incorporating industry best practices to ensure learners are job-ready.<br> 
-I thrive on mentoring individuals, guiding academic projects, and developing innovative, accessible training tools for effective knowledge transfer.<br>
-My work extends to managing training schedules, documentation, and corporate mentorship, ensuring alignment with both academic and industry requirements.<br>
-My passion for Atmanirbhar Bharat drives me to inspire students and professionals to create self-reliant tech solutions that contribute to India’s technological independence.<br>
-I am the author of multiple books,which reflect my commitment to sharing expertise and fostering skill development.
-      </div>
-    </div>
-    <div class="proficiency-section">
-      <h2 class="proficiency-title">Proficiency</h2>
-      <div class="skills-container">
-        <div class="skills-category">
-          <h3 class="skills-header">Programming Languages</h3>
-          <ul class="skills-list">
-            <li>Rust</li>
-            <li>Java</li>
-            <li>Python</li>
-            <li>SQL</li>
-          </ul>
-        </div>
-        <div class="skills-category">
-          <h3 class="skills-header">Frameworks</h3>
-          <ul class="skills-list">
-            <li>Rocket</li>
-            <li>Spring Boot</li>
-            <li>Django</li>
-            <li>Flask</li>
-          </ul>
-        </div>
-        <div class="skills-category">
-          <h3 class="skills-header">Other</h3>
-          <ul class="skills-list">
-            <li>Cybersecurity</li>
-            <li>Advanced Data Structures</li>
-            <li>AI-ML</li>
-            <li>Web Development</li>
-            <li>Android Development</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <div class="section-title">
-      <!-- <h2>Services</h2> -->
-      <p>What I Offer</p>
-    </div>
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="services-list">
-          <div class="service-item">
-            <h4><i class="bx bx-palette"></i> Academic Training & Mentorship</h4>
-            <p style="text-align: justify;">With extensive experience as a technical trainer, I excel in designing and delivering effective training programs that help students achieve their professional goals. My strengths include creating engaging learning materials, conducting interactive sessions, and fostering a supportive learning environment to empower students with practical skills and knowledge.</p>
-          </div>
-          <div class="service-item">
-            <h4><i class="bx bx-palette"></i> Consultation & Project Management-Planning</h4>
-            <p style="text-align: justify;">Providing expert consultation and project management for setting up edutech companies and Section 8 organizations, ensuring efficient planning, resource allocation, and execution aligned with organizational goals.</p>
-          </div>
-          <div class="service-item">
-            <h4><i class="bx bx-palette"></i> Academic Documentation and Compliance</h4>
-            <p style="text-align: justify;">Specialized in preparing and managing documentation for AICTE, DTE, NAAC, and UGC requirements. With a deep understanding of compliance standards, I ensure accurate and timely submissions, handling everything from initial applications to annual reporting for educational institutions.</p>
-          </div>
-          <div class="service-item">
-            <h4><i class="bx bx-palette"></i> Corporate Technical Training & Mentorship</h4>
-            <p style="text-align: justify;">Conducting corporate workshops or one-on-one sessions in Rust, Java, Android, Python, web development, and backend technologies. I help new developers understand best practices, get comfortable with code structure, and gain confidence in their skills.</p>
-          </div>
-          <div class="service-item">
-            <h4><i class="bx bx-lightbulb"></i> Research & Development</h4>
-            <p style="text-align: justify;">Driving innovation through research and development in software solutions, focusing on cutting-edge technologies and methodologies.</p>
-          </div>
-          <div class="service-item">
-            <h4><i class="bx bx-lightbulb"></i> Problem Solving</h4>
-            <p style="text-align: justify;">Skilled in analyzing complex problems and implementing efficient solutions, excelling in logical thinking and troubleshooting.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="services-list">
-          <div class="service-item">
-            <h4><i class="bx bx-palette"></i> Industry and Academic Project Guidance</h4>
-            <p style="text-align: justify;">I offer comprehensive guidance for both industry and academic projects, leveraging my extensive experience in software development and training. My services include assistance with project planning, design, development, and deployment, ensuring alignment with best practices and modern technologies.</p>
-          </div>
-          <div class="service-item">
-            <h4><i class="bx bx-phone"></i> Android App Development</h4>
-            <p style="text-align: justify;">Develop high-quality, user-friendly Android applications with Kotlin, ensuring responsive design and smooth performance.</p>
-          </div>
-          <div class="service-item">
-            <h4><i class="bx bx-window"></i> Web Development</h4>
-            <p style="text-align: justify;">Create modern, responsive websites using Java, Jakarta EE, and Thymeleaf, from landing pages to complete applications.</p>
-          </div>
-          <div class="service-item">
-            <h4><i class="bx bx-server"></i> Backend Development</h4>
-            <p style="text-align: justify;">Build robust backend systems with Rust/Spring Boot, Hibernate, and JPA, specializing in APIs, session management, and secure authentication.</p>
-          </div>
-          <div class="service-item">
-            <h4><i class="bx bx-palette"></i> UI/UX Design</h4>
-            <p style="text-align: justify;">Design intuitive, user-centered interfaces for both Android and web, enhancing user experience with a clean design approach.</p>
-          </div>
-          <div class="service-item">
-            <h4><i class="bx bx-palette"></i> API Development & Integration</h4>
-            <p style="text-align: justify;">Developing and integrating RESTful APIs for seamless communication between front-end and back-end systems, ensuring secure and scalable solutions.</p>
-          </div>
-          <div class="service-item">
-            <h4><i class="bx bx-server"></i> Database Management</h4>
-            <p style="text-align: justify;">Manage MySQL and PostgreSQL databases, handling CRUD operations and data security for reliable data storage and retrieval.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfolio Section -->
-  <section id="portfolio">
-    <div class="section-title">
-      <!-- <h2>Gallery</h2> -->
-      <p>What I've Done</p>
-    </div>
-    <div class="portfolio-container">
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/PDEA_Manjari_19Apr25.jpg" alt="PDEA Manjari" loading="lazy">
-        <div class="portfolio-info">
-          <a href="assets/img/portfolio/PDEA_Manjari_19Apr25.jpg">PDEA College of Engineering, Manjari, Pune</a>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/AVCOE1.jpg" alt="AVCOE" loading="lazy">
-        <div class="portfolio-info">
-          <a href="assets/img/portfolio/AVCOE1.jpg">Amrutvahini College of Engineering, Sangamner</a>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/PDEA_Manjari_18Apr25.jpg" alt="PDEA Manjari" loading="lazy">
-        <div class="portfolio-info">
-          <a href="assets/img/portfolio/PDEA_Manjari_18Apr25.jpg">PDEA College of Engineering, Manjari, Pune</a>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/baramati3.jpg" alt="Baramati" loading="lazy">
-        <div class="portfolio-info">
-          <a href="assets/img/portfolio/baramati3.jpg">Tuljaram Chaturchand College, Baramati</a>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/shinhgad2.jpg" alt="Sinhgad" loading="lazy">
-        <div class="portfolio-info">
-          <a href="assets/img/portfolio/shinhgad2.jpg">SIT Sinhgad Institute Of Technology, Lonavala</a>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/vairag.jpg" alt="Vairag" loading="lazy">
-        <div class="portfolio-info">
-          <a href="assets/img/portfolio/vairag.jpg">Balsanskar Kendra, Vairag</a>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/parul1.jpg" alt="Parul" loading="lazy">
-        <div class="portfolio-info">
-          <a href="assets/img/portfolio/parul1.jpg">Parul University, Gujarat</a>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/chitkara1.jpg" alt="Chitkara" loading="lazy">
-        <div class="portfolio-info">
-          <a href="assets/img/portfolio/chitkara1.jpg">Chitkara University, Punjab</a>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/bitm1.jpg" alt="BITM" loading="lazy">
-        <div class="portfolio-info">
-          <a href="assets/img/portfolio/bitm1.jpg">Ballari Institute of Technology & Management, Bellari</a>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/chitkara3.jpg" alt="Chitkara" loading="lazy">
-        <div class="portfolio-info">
-          <a href="assets/img/portfolio/chitkara3.jpg">Chitkara University, Punjab</a>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/karmayogi1.jpg" alt="Karmayogi" loading="lazy">
-        <div class="portfolio-info">
-          <a href="assets/img/portfolio/karmayogi1.jpg">Karmayogi Institute of Technology, Shelve</a>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/parul2.jpg" alt="Parul" loading="lazy">
-        <div class="portfolio-info">
-          <a href="assets/img/portfolio/parul2.jpg">Parul University, Gujarat</a>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/lamboti.jpg" alt="Lamboti" loading="lazy">
-        <div class="portfolio-info">
-          <a href="assets/img/portfolio/lamboti.jpg">Balsanskar Kendra, Lomboti</a>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/lamboti2.jpg" alt="Lamboti" loading="lazy">
-        <div class="portfolio-info">
-          <a href="assets/img/portfolio/lamboti2.jpg">Balsanskar Kendra, Lomboti</a>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/vishnuUni1.jpg" alt="Vishnu" loading="lazy">
-        <div class="portfolio-info">
-          <a href="assets/img/portfolio/vishnuUni1.jpg">Shri Vishnu Engineering College for Women, Bhimavaram</a>
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/bitm2.jpg" alt="BITM" loading="lazy">
-        <div class="portfolio-info">
-          <a href="assets/img/portfolio/bitm2.jpg">Ballari Institute of Technology & Management, Bellari</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section id="testimonials">
-    <div class="section-title">
-      <!-- <h2>Testimonials</h2> -->
-      <p>What They Say About Me</p>
-    </div>
-    <div class="testimonials-slider">
-      <div class="testimonial-item">
-        <p><i class="bx bxs-quote-alt-left"></i> Anirudha Gaikwad Sir is a skilled and polite trainer who brings deep knowledge to their sessions. They explain the "why" behind each concept, making it easier to understand. Their focus on hands-on practice helps us apply what we learn right away. Overall, their teaching style makes learning enjoyable and effective. Also, they identify the capabilities of students and give the right direction to learn. <i class="bx bxs-quote-alt-right"></i></p>
-      </div>
-      <div class="testimonial-item">
-        <p><i class="bx bxs-quote-alt-left"></i> Sir, you have a great quality which is your knowledge and your teaching are correlation was a wonderful. And this quality helps many students to learn, understand, and implement their knowledge into applications. Finally, I would like to say teaching and knowledge have different parts but you have the best combination of both. <i class="bx bxs-quote-alt-right"></i></p>
-      </div>
-      <div class="testimonial-item">
-        <p><i class="bx bxs-quote-alt-left"></i> Mr. Aniruddha possesses a strong command over the subject matter, ensuring clear and accurate explanations. He provides relevant real-world examples that help clarify complex concepts. <i class="bx bxs-quote-alt-right"></i></p>
-      </div>
-      <div class="testimonial-item">
-        <p><i class="bx bxs-quote-alt-left"></i> The technical training delivered by Anirudh Sir was highly effective. He presented complex topics in a simple, understandable manner and engaged the participants well throughout the session. His expertise and clear explanations made the concepts easier to grasp, and the hands-on exercises were particularly useful. <i class="bx bxs-quote-alt-right"></i></p>
-      </div>
-      <div class="testimonial-item">
-        <p><i class="bx bxs-quote-alt-left"></i> From what I’ve experienced, you’re dedicated and skilled in development especially with Java and Android. You approach projects with both detail and innovation, like integrating Firebase and handling complex permissions. Your persistence in overcoming challenges reflects your commitment to delivering efficient solutions. <i class="bx bxs-quote-alt-right"></i></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <h3>Anirudha Anil Gaikwad</h3>
-    <h5><i class="bx bxs-send"></i> gaikwad.anirudha@gmail.com</h5>
-    <p>Thanks for connecting with me!</p>
-    <div class="social-links">
-      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="bx bxl-twitter"></i></a>
-      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="bx bxl-facebook"></i></a>
-      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="bx bxl-instagram"></i></a>
-      <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="bx bxl-youtube"></i></a>
-      <a href="https://api.whatsapp.com/send/?phone=910000000000&text=Hi%2CI%20got%20your%20number%20from%20your%20portfolio%20page&app_absent=0" target="_blank" rel="noopener noreferrer"><i class="bx bxl-whatsapp"></i></a>
-    </div>
-    <div class="copyright">
-      &copy; <script>document.write(new Date().getFullYear());</script> Anirudha Anil Gaikwad. All Rights Reserved
-    </div>
-  </footer>
-
-  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
-
-  <script>
-    // Mobile nav toggle
-    document.querySelector('.mobile-nav-toggle').addEventListener('click', () => {
-      document.querySelector('nav ul').classList.toggle('active');
-    });
-
-    // Scroll to top on page load
-    window.onbeforeunload = () => window.scrollTo(0, 0);
-
-    // Testimonials auto scroll
-    const testimonialsSlider = document.querySelector('.testimonials-slider');
-    const testimonialItems = document.querySelectorAll('.testimonial-item');
-    let currentIndex = 0;
-
-    function autoScrollTestimonials() {
-      if (testimonialItems.length === 0) return;
-      currentIndex = (currentIndex + 1) % testimonialItems.length;
-      const offset = testimonialItems[currentIndex].offsetLeft;
-      testimonialsSlider.scrollTo({
-        left: offset,
-        behavior: 'smooth'
-      });
-      // Reset to first item when reaching the end
-      if (currentIndex === testimonialItems.length - 1) {
-        setTimeout(() => {
-          testimonialsSlider.scrollTo({
-            left: 0,
-            behavior: 'smooth'
-          });
-          currentIndex = 0;
-        }, 3000); // Delay to show the last item before resetting
-      }
-    }
-
-    // Auto scroll every 4 seconds
-    setInterval(autoScrollTestimonials, 4000);
-
-    // Ensure manual scrolling still works
-    testimonialsSlider.addEventListener('scroll', () => {
-      clearInterval(autoScrollTestimonials);
-      setTimeout(() => setInterval(autoScrollTestimonials, 4000), 8000); // Pause auto-scroll for 8s on manual scroll
-    });
-  </script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Dr. Anirudha Anil Gaikwad | Assistant Professor · Developer ·
+            Trainer
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                --sun-gold: #f5a623;
+                --sun-deep: #e8891a;
+                --sun-light: #fdd878;
+                --sun-pale: #fff5d6;
+                --dawn: #ff7b2c;
+                --white: #ffffff;
+                --cream: #fffdf7;
+                --dark: #1a1008;
+                --mid: #5c3d11;
+                --muted: #9a7b4b;
+                --card-bg: rgba(255, 255, 255, 0.92);
+                --shadow: 0 8px 40px rgba(245, 166, 35, 0.13);
+                --shadow-deep: 0 20px 60px rgba(232, 137, 26, 0.18);
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            html {
+                scroll-behavior: smooth;
+                font-size: 16px;
+            }
+
+            body {
+                font-family: "DM Sans", sans-serif;
+                background: var(--cream);
+                color: var(--dark);
+                overflow-x: hidden;
+            }
+
+            /* ===== SCROLLBAR ===== */
+            ::-webkit-scrollbar {
+                width: 6px;
+            }
+            ::-webkit-scrollbar-track {
+                background: var(--sun-pale);
+            }
+            ::-webkit-scrollbar-thumb {
+                background: var(--sun-gold);
+                border-radius: 3px;
+            }
+
+            /* ===== NAV ===== */
+            nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 100;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0.9rem 5vw;
+                background: rgba(255, 253, 247, 0.92);
+                backdrop-filter: blur(16px);
+                border-bottom: 1px solid rgba(245, 166, 35, 0.18);
+                transition: box-shadow 0.3s;
+            }
+            nav.scrolled {
+                box-shadow: 0 4px 30px rgba(245, 166, 35, 0.12);
+            }
+
+            .nav-logo {
+                font-family: "Playfair Display", serif;
+                font-size: 1.3rem;
+                font-weight: 700;
+                background: linear-gradient(
+                    135deg,
+                    var(--sun-deep),
+                    var(--dawn)
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-decoration: none;
+            }
+
+            .nav-links {
+                display: flex;
+                gap: 2rem;
+                list-style: none;
+                color: var(--dark);
+            }
+            .nav-links a {
+                text-decoration: none;
+                font-size: 0.875rem;
+                font-weight: 500;
+                color: var(--dark);
+                letter-spacing: 0.04em;
+                transition: color 0.2s;
+                position: relative;
+            }
+            .nav-links a::after {
+                content: "";
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background: var(--sun-gold);
+                transform: scaleX(0);
+                transition: transform 0.25s;
+            }
+            .nav-links a:hover {
+                color: var(--sun-deep);
+            }
+            .nav-links a:hover::after {
+                transform: scaleX(1);
+            }
+
+            .nav-cta {
+                background: linear-gradient(
+                    135deg,
+                    var(--sun-gold),
+                    var(--dawn)
+                );
+                color: var(--white) !important;
+                padding: 0.5rem 1.25rem;
+                border-radius: 50px;
+                font-weight: 600 !important;
+                letter-spacing: 0.05em !important;
+                box-shadow: 0 4px 15px rgba(245, 166, 35, 0.35);
+                transition:
+                    transform 0.2s,
+                    box-shadow 0.2s !important;
+            }
+            .nav-cta::after {
+                display: none !important;
+            }
+            .nav-cta:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 25px rgba(245, 166, 35, 0.45) !important;
+                color: var(--white) !important;
+            }
+
+            .hamburger {
+                display: none;
+                flex-direction: column;
+                gap: 5px;
+                cursor: pointer;
+                padding: 4px;
+            }
+            .hamburger span {
+                display: block;
+                width: 24px;
+                height: 2px;
+                background: var(--mid);
+                border-radius: 2px;
+                transition: all 0.3s;
+            }
+
+            /* ===== HERO ===== */
+            #hero {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                padding: 7rem 5vw 4rem;
+                position: relative;
+                overflow: hidden;
+                background: linear-gradient(
+                    145deg,
+                    #fff9ec 0%,
+                    #fffdf7 40%,
+                    #fff5d6 100%
+                );
+            }
+
+            .hero-bg-circle {
+                position: absolute;
+                border-radius: 50%;
+                filter: blur(80px);
+                pointer-events: none;
+            }
+            .hbc1 {
+                width: 600px;
+                height: 600px;
+                top: -200px;
+                right: -150px;
+                background: radial-gradient(
+                    circle,
+                    rgba(253, 216, 120, 0.45) 0%,
+                    transparent 70%
+                );
+            }
+            .hbc2 {
+                width: 400px;
+                height: 400px;
+                bottom: -100px;
+                left: -80px;
+                background: radial-gradient(
+                    circle,
+                    rgba(255, 123, 44, 0.2) 0%,
+                    transparent 70%
+                );
+            }
+            .hbc3 {
+                width: 300px;
+                height: 300px;
+                top: 50%;
+                left: 38%;
+                background: radial-gradient(
+                    circle,
+                    rgba(245, 166, 35, 0.12) 0%,
+                    transparent 70%
+                );
+            }
+
+            .hero-content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+                align-items: center;
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                position: relative;
+                z-index: 2;
+            }
+
+            .hero-badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                background: linear-gradient(
+                    135deg,
+                    rgba(245, 166, 35, 0.15),
+                    rgba(255, 123, 44, 0.1)
+                );
+                border: 1px solid rgba(245, 166, 35, 0.3);
+                padding: 0.4rem 1rem;
+                border-radius: 50px;
+                font-size: 0.78rem;
+                font-weight: 600;
+                letter-spacing: 0.08em;
+                color: var(--sun-deep);
+                margin-bottom: 1.2rem;
+                animation: fadeInUp 0.6s ease both;
+            }
+            .hero-badge-dot {
+                width: 7px;
+                height: 7px;
+                background: var(--sun-gold);
+                border-radius: 50%;
+                animation: pulse 2s infinite;
+            }
+
+            @keyframes pulse {
+                0%,
+                100% {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                50% {
+                    opacity: 0.6;
+                    transform: scale(1.3);
+                }
+            }
+
+            .hero-title {
+                font-family: "Playfair Display", serif;
+                font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+                font-weight: 900;
+                line-height: 1.12;
+                color: var(--dark);
+                animation: fadeInUp 0.7s 0.1s ease both;
+            }
+            .hero-title .highlight {
+                background: linear-gradient(
+                    135deg,
+                    var(--sun-deep) 0%,
+                    var(--dawn) 60%,
+                    var(--sun-gold) 100%
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .hero-subtitle {
+                margin-top: 1rem;
+                font-size: 1.05rem;
+                color: var(--muted);
+                font-weight: 400;
+                line-height: 1.7;
+                max-width: 520px;
+                animation: fadeInUp 0.7s 0.2s ease both;
+            }
+
+            .hero-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.6rem;
+                margin-top: 1.5rem;
+                animation: fadeInUp 0.7s 0.3s ease both;
+            }
+            .hero-tag {
+                padding: 0.35rem 0.9rem;
+                border-radius: 50px;
+                font-size: 0.78rem;
+                font-weight: 600;
+                letter-spacing: 0.05em;
+                background: white;
+                border: 1.5px solid rgba(245, 166, 35, 0.35);
+                color: var(--mid);
+            }
+
+            .hero-stats {
+                display: flex;
+                gap: 2.5rem;
+                margin-top: 2.5rem;
+                animation: fadeInUp 0.7s 0.4s ease both;
+            }
+            .stat-item {
+                display: flex;
+                flex-direction: column;
+            }
+            .stat-num {
+                font-family: "Playfair Display", serif;
+                font-size: 2rem;
+                font-weight: 900;
+                background: linear-gradient(
+                    135deg,
+                    var(--sun-deep),
+                    var(--dawn)
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                line-height: 1;
+            }
+            .stat-label {
+                font-size: 0.75rem;
+                color: var(--muted);
+                margin-top: 0.25rem;
+                font-weight: 500;
+                letter-spacing: 0.04em;
+            }
+
+            .hero-ctas {
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+                margin-top: 2.5rem;
+                animation: fadeInUp 0.7s 0.5s ease both;
+            }
+            .btn-primary {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                background: linear-gradient(
+                    135deg,
+                    var(--sun-gold),
+                    var(--dawn)
+                );
+                color: white;
+                padding: 0.85rem 2rem;
+                border-radius: 50px;
+                font-weight: 600;
+                font-size: 0.9rem;
+                text-decoration: none;
+                box-shadow: 0 8px 25px rgba(245, 166, 35, 0.4);
+                transition:
+                    transform 0.2s,
+                    box-shadow 0.2s;
+                border: none;
+                cursor: pointer;
+            }
+            .btn-primary:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 12px 35px rgba(245, 166, 35, 0.5);
+            }
+
+            .btn-secondary {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                background: white;
+                color: var(--mid);
+                padding: 0.85rem 2rem;
+                border-radius: 50px;
+                font-weight: 600;
+                font-size: 0.9rem;
+                text-decoration: none;
+                border: 1.5px solid rgba(245, 166, 35, 0.4);
+                transition: all 0.2s;
+                cursor: pointer;
+            }
+            .btn-secondary:hover {
+                border-color: var(--sun-gold);
+                color: var(--sun-deep);
+                transform: translateY(-3px);
+                box-shadow: var(--shadow);
+            }
+
+            /* SVG Avatar */
+            .hero-visual {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                animation: fadeInRight 0.9s 0.2s ease both;
+            }
+
+            .avatar-wrapper {
+                position: relative;
+                width: 420px;
+                height: 420px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .avatar-ring {
+                position: absolute;
+                border-radius: 50%;
+                animation: spin 20s linear infinite;
+            }
+            .avatar-ring-1 {
+                width: 420px;
+                height: 420px;
+                border: 2px dashed rgba(245, 166, 35, 0.25);
+            }
+            .avatar-ring-2 {
+                width: 370px;
+                height: 370px;
+                border: 1.5px solid rgba(232, 137, 26, 0.2);
+                animation-direction: reverse;
+                animation-duration: 15s;
+            }
+
+            .avatar-glow {
+                position: absolute;
+                width: 320px;
+                height: 320px;
+                border-radius: 50%;
+                background: radial-gradient(
+                    circle,
+                    rgba(253, 216, 120, 0.6) 0%,
+                    rgba(245, 166, 35, 0.3) 50%,
+                    transparent 70%
+                );
+                filter: blur(20px);
+            }
+
+            .avatar-svg-container {
+                position: relative;
+                z-index: 2;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                background: linear-gradient(145deg, #fff9ec, #ffefc0);
+                border: 3px solid rgba(245, 166, 35, 0.4);
+                box-shadow:
+                    0 20px 60px rgba(245, 166, 35, 0.25),
+                    inset 0 2px 10px rgba(255, 255, 255, 0.8);
+                overflow: hidden;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+            }
+
+            /* Floating skill chips */
+            .float-chip {
+                position: absolute;
+                background: white;
+                border: 1.5px solid rgba(245, 166, 35, 0.35);
+                border-radius: 50px;
+                padding: 0.4rem 0.9rem;
+                font-size: 0.75rem;
+                font-weight: 600;
+                color: var(--mid);
+                display: flex;
+                align-items: center;
+                gap: 0.4rem;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+                white-space: nowrap;
+            }
+            .fc1 {
+                top: 40px;
+                left: -30px;
+                animation: float 4s ease-in-out infinite;
+            }
+            .fc2 {
+                top: 90px;
+                right: -40px;
+                animation: float 4.5s 0.5s ease-in-out infinite;
+            }
+            .fc3 {
+                bottom: 100px;
+                left: -50px;
+                animation: float 3.8s 1s ease-in-out infinite;
+            }
+            .fc4 {
+                bottom: 60px;
+                right: -30px;
+                animation: float 4.2s 1.5s ease-in-out infinite;
+            }
+            .chip-dot {
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: var(--sun-gold);
+            }
+
+            @keyframes float {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+            @keyframes spin {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            @keyframes fadeInRight {
+                from {
+                    opacity: 0;
+                    transform: translateX(40px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            /* ===== SECTION COMMONS ===== */
+            section {
+                padding: 6rem 5vw;
+            }
+            .section-inner {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .section-label {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.6rem;
+                font-size: 0.75rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                color: var(--sun-deep);
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+            }
+            .section-label::before {
+                content: "";
+                display: block;
+                width: 28px;
+                height: 2px;
+                background: linear-gradient(
+                    90deg,
+                    var(--sun-gold),
+                    var(--dawn)
+                );
+            }
+
+            .section-title {
+                font-family: "Playfair Display", serif;
+                font-size: clamp(2rem, 3.5vw, 3rem);
+                font-weight: 800;
+                line-height: 1.18;
+                color: var(--dark);
+            }
+            .section-sub {
+                font-size: 1rem;
+                color: var(--muted);
+                max-width: 580px;
+                line-height: 1.75;
+                margin-top: 0.8rem;
+            }
+
+            /* ===== ABOUT ===== */
+            #about {
+                background: white;
+            }
+
+            .about-grid {
+                display: grid;
+                grid-template-columns: 1fr 1.4fr;
+                gap: 5rem;
+                align-items: start;
+                margin-top: 4rem;
+            }
+
+            .about-visual-col {
+                position: sticky;
+                top: 100px;
+            }
+
+            .about-card {
+                background: linear-gradient(145deg, var(--sun-pale), #fff9ec);
+                border-radius: 24px;
+                padding: 2.5rem;
+                border: 1px solid rgba(245, 166, 35, 0.2);
+                box-shadow: var(--shadow);
+            }
+
+            .about-avatar-mini {
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                background: linear-gradient(
+                    135deg,
+                    var(--sun-gold),
+                    var(--dawn)
+                );
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 1.2rem;
+                box-shadow: 0 8px 25px rgba(245, 166, 35, 0.4);
+            }
+
+            .about-name-card {
+                font-family: "Playfair Display", serif;
+                font-size: 1.4rem;
+                font-weight: 800;
+                color: var(--dark);
+            }
+            .about-role-card {
+                font-size: 0.85rem;
+                color: var(--muted);
+                margin-top: 0.3rem;
+                line-height: 1.5;
+            }
+
+            .skills-bar {
+                margin-top: 2rem;
+            }
+            .skill-bar-item {
+                margin-bottom: 1.1rem;
+            }
+            .skill-bar-header {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 0.4rem;
+                font-size: 0.82rem;
+                font-weight: 600;
+                color: var(--mid);
+            }
+            .skill-bar-track {
+                height: 6px;
+                background: rgba(245, 166, 35, 0.15);
+                border-radius: 3px;
+                overflow: hidden;
+            }
+            .skill-bar-fill {
+                height: 100%;
+                border-radius: 3px;
+                background: linear-gradient(
+                    90deg,
+                    var(--sun-gold),
+                    var(--dawn)
+                );
+                transform-origin: left;
+                animation: fillBar 1.2s ease forwards;
+            }
+            @keyframes fillBar {
+                from {
+                    transform: scaleX(0);
+                }
+                to {
+                    transform: scaleX(1);
+                }
+            }
+
+            .about-text-col {
+            }
+            .about-bio {
+                font-size: 1rem;
+                line-height: 1.85;
+                color: #3a2806;
+            }
+            .about-bio + .about-bio {
+                margin-top: 1.2rem;
+            }
+
+            .about-highlights {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+                margin-top: 2.5rem;
+            }
+            .highlight-card {
+                background: var(--sun-pale);
+                border: 1px solid rgba(245, 166, 35, 0.2);
+                border-radius: 16px;
+                padding: 1.25rem;
+                transition:
+                    transform 0.2s,
+                    box-shadow 0.2s;
+            }
+            .highlight-card:hover {
+                transform: translateY(-4px);
+                box-shadow: var(--shadow);
+            }
+            .hc-icon {
+                font-size: 1.5rem;
+                margin-bottom: 0.6rem;
+            }
+            .hc-title {
+                font-size: 0.82rem;
+                font-weight: 700;
+                color: var(--mid);
+                letter-spacing: 0.04em;
+                margin-bottom: 0.3rem;
+            }
+            .hc-val {
+                font-family: "Playfair Display", serif;
+                font-size: 1.5rem;
+                font-weight: 900;
+                color: var(--dark);
+            }
+
+            /* ===== SERVICES ===== */
+            #services {
+                background: linear-gradient(
+                    160deg,
+                    #fffdf7,
+                    var(--sun-pale) 60%,
+                    #fff9ec
+                );
+            }
+
+            .services-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                flex-wrap: wrap;
+                gap: 1.5rem;
+                margin-bottom: 3.5rem;
+            }
+
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .service-card {
+                background: var(--card-bg);
+                border: 1px solid rgba(245, 166, 35, 0.15);
+                border-radius: 20px;
+                padding: 2rem;
+                position: relative;
+                overflow: hidden;
+                transition:
+                    transform 0.25s,
+                    box-shadow 0.25s;
+                cursor: default;
+            }
+            .service-card::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background: linear-gradient(
+                    90deg,
+                    var(--sun-gold),
+                    var(--dawn)
+                );
+                transform: scaleX(0);
+                transition: transform 0.3s;
+            }
+            .service-card:hover {
+                transform: translateY(-6px);
+                box-shadow: var(--shadow-deep);
+            }
+            .service-card:hover::before {
+                transform: scaleX(1);
+            }
+
+            .service-icon {
+                width: 52px;
+                height: 52px;
+                border-radius: 14px;
+                background: linear-gradient(
+                    135deg,
+                    rgba(245, 166, 35, 0.15),
+                    rgba(255, 123, 44, 0.1)
+                );
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 1.2rem;
+            }
+
+            .service-title {
+                font-size: 1rem;
+                font-weight: 700;
+                color: var(--dark);
+                margin-bottom: 0.6rem;
+            }
+            .service-desc {
+                font-size: 0.875rem;
+                color: var(--muted);
+                line-height: 1.7;
+            }
+
+            /* ===== PATENTS ===== */
+            #patents {
+                background: white;
+            }
+
+            .patents-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+                gap: 1.5rem;
+                margin-top: 3rem;
+            }
+
+            .patent-card {
+                background: linear-gradient(145deg, #fff9ec, white);
+                border: 1px solid rgba(245, 166, 35, 0.25);
+                border-radius: 20px;
+                padding: 2rem;
+                position: relative;
+                transition:
+                    transform 0.25s,
+                    box-shadow 0.25s;
+            }
+            .patent-card:hover {
+                transform: translateY(-5px);
+                box-shadow: var(--shadow-deep);
+            }
+
+            .patent-badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.4rem;
+                background: linear-gradient(
+                    135deg,
+                    var(--sun-gold),
+                    var(--dawn)
+                );
+                color: white;
+                padding: 0.3rem 0.8rem;
+                border-radius: 50px;
+                font-size: 0.7rem;
+                font-weight: 700;
+                letter-spacing: 0.06em;
+                margin-bottom: 1rem;
+            }
+
+            .patent-title {
+                font-size: 0.95rem;
+                font-weight: 600;
+                color: var(--dark);
+                line-height: 1.5;
+            }
+
+            /* ===== BOOKS ===== */
+            #books {
+                background: linear-gradient(
+                    145deg,
+                    var(--sun-pale),
+                    white 50%,
+                    #fff9ec
+                );
+            }
+
+            .books-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 2rem;
+                margin-top: 3rem;
+            }
+
+            .book-card {
+                background: white;
+                border-radius: 20px;
+                overflow: hidden;
+                border: 1px solid rgba(245, 166, 35, 0.2);
+                box-shadow: var(--shadow);
+                transition:
+                    transform 0.25s,
+                    box-shadow 0.25s;
+                display: flex;
+            }
+            .book-card:hover {
+                transform: translateY(-6px);
+                box-shadow: var(--shadow-deep);
+            }
+
+            .book-spine {
+                width: 10px;
+                background: linear-gradient(
+                    180deg,
+                    var(--sun-gold),
+                    var(--dawn)
+                );
+                flex-shrink: 0;
+            }
+
+            .book-body {
+                padding: 1.75rem;
+            }
+            .book-icon {
+                font-size: 2rem;
+                margin-bottom: 0.8rem;
+            }
+            .book-title {
+                font-family: "Playfair Display", serif;
+                font-size: 1.1rem;
+                font-weight: 700;
+                color: var(--dark);
+                line-height: 1.3;
+                margin-bottom: 0.6rem;
+            }
+            .book-isbn {
+                font-size: 0.77rem;
+                color: var(--muted);
+                font-weight: 600;
+                letter-spacing: 0.06em;
+            }
+
+            /* ===== GALLERY ===== */
+            #gallery {
+                background: white;
+            }
+
+            .gallery-header {
+                margin-bottom: 3rem;
+            }
+
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-auto-rows: 220px;
+                gap: 1rem;
+            }
+
+            .gallery-item {
+                border-radius: 16px;
+                overflow: hidden;
+                position: relative;
+                background: var(--sun-pale);
+                border: 1px solid rgba(245, 166, 35, 0.15);
+                transition:
+                    transform 0.25s,
+                    box-shadow 0.25s;
+            }
+            .gallery-item:nth-child(5n + 1) {
+                grid-column: span 2;
+            }
+            .gallery-item:nth-child(7n + 4) {
+                grid-row: span 2;
+            }
+            .gallery-item:hover {
+                transform: scale(1.02);
+                box-shadow: var(--shadow-deep);
+                z-index: 2;
+            }
+
+            .gallery-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                transition: transform 0.4s;
+            }
+            .gallery-item:hover img {
+                transform: scale(1.06);
+            }
+
+            .gallery-overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 0.8rem 1rem;
+                background: linear-gradient(transparent, rgba(26, 16, 8, 0.75));
+                color: white;
+                font-size: 0.78rem;
+                font-weight: 500;
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+            .gallery-item:hover .gallery-overlay {
+                opacity: 1;
+            }
+
+            /* ===== TESTIMONIALS ===== */
+            #testimonials {
+                background: linear-gradient(160deg, #fff9ec, var(--sun-pale));
+            }
+
+            .testimonials-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 1.5rem;
+                margin-top: 3rem;
+            }
+
+            .testimonial-card {
+                background: white;
+                border-radius: 20px;
+                padding: 2rem;
+                border: 1px solid rgba(245, 166, 35, 0.15);
+                box-shadow: var(--shadow);
+                position: relative;
+                transition: transform 0.25s;
+            }
+            .testimonial-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .testimonial-quote {
+                font-size: 3rem;
+                line-height: 1;
+                background: linear-gradient(
+                    135deg,
+                    var(--sun-gold),
+                    var(--dawn)
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                font-family: serif;
+                margin-bottom: 1rem;
+            }
+
+            .testimonial-text {
+                font-size: 0.9rem;
+                line-height: 1.75;
+                color: #4a3010;
+                font-style: italic;
+            }
+
+            .testimonial-author {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                margin-top: 1.5rem;
+                padding-top: 1.2rem;
+                border-top: 1px solid rgba(245, 166, 35, 0.15);
+            }
+            .t-avatar {
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                background: linear-gradient(
+                    135deg,
+                    var(--sun-gold),
+                    var(--dawn)
+                );
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-weight: 700;
+                font-size: 0.9rem;
+                flex-shrink: 0;
+            }
+            .t-name {
+                font-size: 0.85rem;
+                font-weight: 700;
+                color: var(--dark);
+            }
+            .t-role {
+                font-size: 0.75rem;
+                color: var(--muted);
+            }
+
+            /* ===== CONTACT ===== */
+            #contact {
+                background: white;
+            }
+
+            .contact-wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1.2fr;
+                gap: 4rem;
+                align-items: start;
+                margin-top: 4rem;
+            }
+
+            .contact-info {
+            }
+            .contact-desc {
+                font-size: 1rem;
+                color: var(--muted);
+                line-height: 1.8;
+                margin-top: 1rem;
+            }
+
+            .contact-items {
+                margin-top: 2.5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1.25rem;
+            }
+            .contact-item {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                text-decoration: none;
+            }
+            .contact-icon {
+                width: 46px;
+                height: 46px;
+                border-radius: 13px;
+                background: linear-gradient(
+                    135deg,
+                    rgba(245, 166, 35, 0.12),
+                    rgba(255, 123, 44, 0.08)
+                );
+                border: 1px solid rgba(245, 166, 35, 0.25);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                color: var(--sun-deep);
+            }
+            .contact-text {
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: var(--dark);
+            }
+            .contact-sublabel {
+                font-size: 0.78rem;
+                color: var(--muted);
+                margin-top: 0.1rem;
+            }
+
+            .contact-form {
+                background: var(--sun-pale);
+                border: 1px solid rgba(245, 166, 35, 0.2);
+                border-radius: 24px;
+                padding: 2.5rem;
+            }
+
+            .form-row {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                gap: 0.4rem;
+                margin-bottom: 1.25rem;
+            }
+            .form-group label {
+                font-size: 0.8rem;
+                font-weight: 600;
+                color: var(--mid);
+                letter-spacing: 0.04em;
+            }
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                background: white;
+                border: 1.5px solid rgba(245, 166, 35, 0.25);
+                border-radius: 10px;
+                padding: 0.75rem 1rem;
+                font-size: 0.9rem;
+                font-family: "DM Sans", sans-serif;
+                color: var(--dark);
+                transition:
+                    border-color 0.2s,
+                    box-shadow 0.2s;
+                resize: none;
+            }
+            .form-group input:focus,
+            .form-group textarea:focus,
+            .form-group select:focus {
+                outline: none;
+                border-color: var(--sun-gold);
+                box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.12);
+            }
+            .form-group textarea {
+                min-height: 110px;
+            }
+
+            /* ===== FOOTER ===== */
+            footer {
+                background: var(--dark);
+                padding: 3rem 5vw;
+                color: rgba(255, 255, 255, 0.6);
+                font-size: 0.85rem;
+            }
+            .footer-inner {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            .footer-brand {
+                font-family: "Playfair Display", serif;
+                font-size: 1.1rem;
+                font-weight: 700;
+                background: linear-gradient(
+                    135deg,
+                    var(--sun-gold),
+                    var(--dawn)
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            .footer-links {
+                display: flex;
+                gap: 1.5rem;
+            }
+            .footer-links a {
+                color: rgba(255, 255, 255, 0.5);
+                text-decoration: none;
+                transition: color 0.2s;
+            }
+            .footer-links a:hover {
+                color: var(--sun-gold);
+            }
+
+            /* ===== RESPONSIVE ===== */
+            @media (max-width: 1024px) {
+                .hero-content {
+                    grid-template-columns: 1fr;
+                    gap: 3rem;
+                }
+                .hero-visual {
+                    order: -1;
+                }
+                .avatar-wrapper {
+                    width: 280px;
+                    height: 280px;
+                }
+                .avatar-ring-1 {
+                    width: 280px;
+                    height: 280px;
+                }
+                .avatar-ring-2 {
+                    width: 240px;
+                    height: 240px;
+                }
+                .avatar-glow {
+                    width: 220px;
+                    height: 220px;
+                }
+                .avatar-svg-container {
+                    width: 200px;
+                    height: 200px;
+                }
+                .fc1,
+                .fc2,
+                .fc3,
+                .fc4 {
+                    display: none;
+                }
+                .about-grid {
+                    grid-template-columns: 1fr;
+                    gap: 2.5rem;
+                }
+                .about-visual-col {
+                    position: relative;
+                    top: 0;
+                }
+                .contact-wrapper {
+                    grid-template-columns: 1fr;
+                }
+                .gallery-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+                .gallery-item:nth-child(5n + 1) {
+                    grid-column: span 1;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .nav-links {
+                    display: none;
+                    flex-direction: column;
+                    position: fixed;
+                    top: 64px;
+                    left: 0;
+                    right: 0;
+                    background: #fffdf7;
+                    padding: 2rem;
+                    border-bottom: 1px solid rgba(245, 166, 35, 0.2);
+                    gap: 1rem;
+                    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+                }
+                .nav-links.open {
+                    display: flex;
+                }
+                .hamburger {
+                    display: flex;
+                }
+                section {
+                    padding: 4rem 5vw;
+                }
+                .hero-stats {
+                    gap: 1.5rem;
+                }
+                .gallery-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                .gallery-item:nth-child(5n + 1) {
+                    grid-column: span 2;
+                }
+                .about-highlights {
+                    grid-template-columns: 1fr 1fr;
+                }
+                .form-row {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .gallery-grid {
+                    grid-template-columns: 1fr 1fr;
+                }
+                .gallery-item:nth-child(5n + 1) {
+                    grid-column: span 2;
+                }
+                .gallery-item:nth-child(7n + 4) {
+                    grid-row: span 1;
+                }
+            }
+
+            /* ===== INTERSECTION ANIMATIONS ===== */
+            .reveal {
+                opacity: 0;
+                transform: translateY(28px);
+                transition:
+                    opacity 0.6s ease,
+                    transform 0.6s ease;
+            }
+            .reveal.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        </style>
+    </head>
+    <body>
+        <!-- ===== NAV ===== -->
+        <nav id="navbar">
+            <a href="#hero" class="nav-logo">Dr. Anirudha Gaikwad</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#patents">Patents</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+
+        <!-- ===== HERO ===== -->
+        <section id="hero">
+            <div class="hero-bg-circle hbc1"></div>
+            <div class="hero-bg-circle hbc2"></div>
+            <div class="hero-bg-circle hbc3"></div>
+
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <div class="hero-badge-dot"></div>
+                        Available for Training & Consulting
+                    </div>
+                    <h1 class="hero-title">
+                        Dr. Anirudha<br />
+                        <span class="highlight">Anil Gaikwad</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Assistant Professor · Software Developer · Freelance
+                        Corporate Technical Trainer<br />
+                        <strong style="color: var(--sun-deep)"
+                            >14+ years</strong
+                        >
+                        of industry experience bridging innovation with
+                        education.
+                    </p>
+                    <div class="hero-tags">
+                        <span class="hero-tag">🦀 Rust</span>
+                        <span class="hero-tag">☕ Java</span>
+                        <span class="hero-tag">🐍 Python</span>
+                        <span class="hero-tag">🔒 Cybersecurity</span>
+                        <span class="hero-tag">🤖 AI/ML</span>
+                        <span class="hero-tag">📱 Android</span>
+                        <span class="hero-tag">🌐 Web Dev</span>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-num">5000+</span>
+                            <span class="stat-label"
+                                >Professionals Mentored</span
+                            >
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">40+</span>
+                            <span class="stat-label">Software Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">4</span>
+                            <span class="stat-label">Granted Patents</span>
+                        </div>
+                    </div>
+                    <div class="hero-ctas">
+                        <a href="#contact" class="btn-primary">
+                            <svg
+                                width="16"
+                                height="16"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M22 16.92V19a2 2 0 01-2.18 2A19.79 19.79 0 013 5.18 2 2 0 015 3h2.09a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 17v-.08z"
+                                />
+                            </svg>
+                            Hire Me Now
+                        </a>
+                        <a href="#about" class="btn-secondary">
+                            <svg
+                                width="16"
+                                height="16"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                            >
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 8v4l3 3" />
+                            </svg>
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="avatar-wrapper">
+                        <div class="avatar-ring avatar-ring-1"></div>
+                        <div class="avatar-ring avatar-ring-2"></div>
+                        <div class="avatar-glow"></div>
+
+                        <!-- Floating chips -->
+                        <div class="float-chip fc1">
+                            <div class="chip-dot"></div>
+                            14+ Yrs Exp
+                        </div>
+                        <div class="float-chip fc2">
+                            <div class="chip-dot"></div>
+                            66 Training Sessions
+                        </div>
+                        <div class="float-chip fc3">
+                            <div class="chip-dot"></div>
+                            Dr. (PhD)
+                        </div>
+                        <div class="float-chip fc4">
+                            <div class="chip-dot"></div>
+                            Published Author
+                        </div>
+
+                        <div
+                            class="avatar-svg-container"
+                            style="
+                                border-radius: 50%;
+                                overflow: hidden;
+                                width: 300px;
+                                height: 300px;
+                                border: 3px solid rgba(245, 166, 35, 0.4);
+                                box-shadow: 0 20px 60px rgba(245, 166, 35, 0.25);
+                                background: linear-gradient(
+                                    145deg,
+                                    #fff9ec,
+                                    #ffefc0
+                                );
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            "
+                        >
+                            <img
+                                src="https://anirudhagaikwad.github.io/assets/img/logo/android-icon-192x192.png"
+                                alt="Dr. Anirudha Anil Gaikwad"
+                                style="
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    object-position: center top;
+                                    display: block;
+                                "
+                                onerror="
+                                    this.style.display = 'none';
+                                    this.parentElement.innerHTML =
+                                        '<div style=\'width:100%;height:100%;background:linear-gradient(135deg,#FDD878,#F5A623);display:flex;align-items:center;justify-content:center;font-size:4rem;\'>👨‍💻</div>';
+                                "
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT ===== -->
+        <section id="about">
+            <div class="section-inner">
+                <div class="about-grid">
+                    <div class="about-visual-col reveal">
+                        <div class="about-card">
+                            <div class="about-avatar-mini">
+                                <svg
+                                    width="46"
+                                    height="46"
+                                    viewBox="0 0 46 46"
+                                    fill="none"
+                                >
+                                    <circle
+                                        cx="23"
+                                        cy="16"
+                                        r="10"
+                                        fill="rgba(255,255,255,0.9)"
+                                    />
+                                    <ellipse
+                                        cx="23"
+                                        cy="38"
+                                        rx="17"
+                                        ry="12"
+                                        fill="rgba(255,255,255,0.7)"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="about-name-card">
+                                Dr. Anirudha Anil Gaikwad
+                            </div>
+                            <div class="about-role-card">
+                                Ph.D. · Assistant Professor<br />Software
+                                Developer · Corporate Trainer
+                            </div>
+
+                            <div class="skills-bar" style="margin-top: 1.8rem">
+                                <div class="skill-bar-item">
+                                    <div class="skill-bar-header">
+                                        <span>Rust Programming</span
+                                        ><span>95%</span>
+                                    </div>
+                                    <div class="skill-bar-track">
+                                        <div
+                                            class="skill-bar-fill"
+                                            style="width: 95%"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="skill-bar-item">
+                                    <div class="skill-bar-header">
+                                        <span>Java Full Stack</span
+                                        ><span>92%</span>
+                                    </div>
+                                    <div class="skill-bar-track">
+                                        <div
+                                            class="skill-bar-fill"
+                                            style="width: 92%"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="skill-bar-item">
+                                    <div class="skill-bar-header">
+                                        <span>Cybersecurity</span
+                                        ><span>88%</span>
+                                    </div>
+                                    <div class="skill-bar-track">
+                                        <div
+                                            class="skill-bar-fill"
+                                            style="width: 88%"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="skill-bar-item">
+                                    <div class="skill-bar-header">
+                                        <span>Python / AI-ML</span
+                                        ><span>85%</span>
+                                    </div>
+                                    <div class="skill-bar-track">
+                                        <div
+                                            class="skill-bar-fill"
+                                            style="width: 85%"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="skill-bar-item">
+                                    <div class="skill-bar-header">
+                                        <span>Android / Web</span
+                                        ><span>90%</span>
+                                    </div>
+                                    <div class="skill-bar-track">
+                                        <div
+                                            class="skill-bar-fill"
+                                            style="width: 90%"
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                style="
+                                    margin-top: 1.8rem;
+                                    display: flex;
+                                    gap: 0.6rem;
+                                    flex-wrap: wrap;
+                                "
+                            >
+                                <span
+                                    style="
+                                        font-size: 0.75rem;
+                                        padding: 0.3rem 0.7rem;
+                                        background: rgba(245, 166, 35, 0.12);
+                                        border-radius: 50px;
+                                        color: var(--sun-deep);
+                                        font-weight: 600;
+                                    "
+                                    >Spring Boot</span
+                                >
+                                <span
+                                    style="
+                                        font-size: 0.75rem;
+                                        padding: 0.3rem 0.7rem;
+                                        background: rgba(245, 166, 35, 0.12);
+                                        border-radius: 50px;
+                                        color: var(--sun-deep);
+                                        font-weight: 600;
+                                    "
+                                    >Django</span
+                                >
+                                <span
+                                    style="
+                                        font-size: 0.75rem;
+                                        padding: 0.3rem 0.7rem;
+                                        background: rgba(245, 166, 35, 0.12);
+                                        border-radius: 50px;
+                                        color: var(--sun-deep);
+                                        font-weight: 600;
+                                    "
+                                    >Flask</span
+                                >
+                                <span
+                                    style="
+                                        font-size: 0.75rem;
+                                        padding: 0.3rem 0.7rem;
+                                        background: rgba(245, 166, 35, 0.12);
+                                        border-radius: 50px;
+                                        color: var(--sun-deep);
+                                        font-weight: 600;
+                                    "
+                                    >Rocket</span
+                                >
+                                <span
+                                    style="
+                                        font-size: 0.75rem;
+                                        padding: 0.3rem 0.7rem;
+                                        background: rgba(245, 166, 35, 0.12);
+                                        border-radius: 50px;
+                                        color: var(--sun-deep);
+                                        font-weight: 600;
+                                    "
+                                    >SQL/PLSQL</span
+                                >
+                                <span
+                                    style="
+                                        font-size: 0.75rem;
+                                        padding: 0.3rem 0.7rem;
+                                        background: rgba(245, 166, 35, 0.12);
+                                        border-radius: 50px;
+                                        color: var(--sun-deep);
+                                        font-weight: 600;
+                                    "
+                                    >Firebase</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="about-text-col reveal"
+                        style="transition-delay: 0.15s"
+                    >
+                        <div class="section-label">About Me</div>
+                        <h2 class="section-title">
+                            Innovator. Educator.<br />Problem Solver.
+                        </h2>
+
+                        <p class="about-bio" style="margin-top: 1.5rem">
+                            Dr. Anirudha Anil Gaikwad is an Assistant Professor,
+                            Software Developer, and Freelance Corporate
+                            Technical Trainer with over
+                            <strong>14 years of industry experience</strong>.
+                            Renowned for his passion for software development
+                            and education, he blends innovation with practical
+                            insight to deliver impactful learning experiences.
+                        </p>
+                        <p class="about-bio">
+                            Anirudha has mentored over
+                            <strong>5000 professionals</strong> through
+                            instructor-led training, academic project guidance,
+                            and corporate development programs. His hands-on
+                            approach bridges the gap between theory and
+                            real-world application, empowering learners to excel
+                            in modern tech environments.
+                        </p>
+                        <p class="about-bio">
+                            He has delivered more than
+                            <strong>40 software projects</strong> in web and
+                            Android domains. Excelling in project management,
+                            client interaction, and cross-disciplinary
+                            collaboration, his dedication to innovation and
+                            education continues to drive success in both
+                            academia and industry.
+                        </p>
+                        <p class="about-bio">
+                            His specialized research focuses on
+                            <strong>Cybersecurity</strong>, particularly in
+                            Anomaly Detection and Incident Response,
+                            complementing his broader expertise in AI-driven
+                            solutions and secure software development.
+                        </p>
+
+                        <div class="about-highlights">
+                            <div
+                                class="highlight-card reveal"
+                                style="transition-delay: 0.3s"
+                            >
+                                <div class="hc-icon">🎓</div>
+                                <div class="hc-title">Training Sessions</div>
+                                <div class="hc-val">66+</div>
+                            </div>
+                            <div
+                                class="highlight-card reveal"
+                                style="transition-delay: 0.35s"
+                            >
+                                <div class="hc-icon">🏛️</div>
+                                <div class="hc-title">Top Universities</div>
+                                <div class="hc-val">
+                                    Chitkara, Parul, Symbiosis...
+                                </div>
+                            </div>
+                            <div
+                                class="highlight-card reveal"
+                                style="transition-delay: 0.4s"
+                            >
+                                <div class="hc-icon">📱</div>
+                                <div class="hc-title">Projects Delivered</div>
+                                <div class="hc-val">40+</div>
+                            </div>
+                            <div
+                                class="highlight-card reveal"
+                                style="transition-delay: 0.45s"
+                            >
+                                <div class="hc-icon">📖</div>
+                                <div class="hc-title">Published Books</div>
+                                <div class="hc-val">3 Books</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SERVICES ===== -->
+        <section id="services">
+            <div class="section-inner">
+                <div class="services-header">
+                    <div>
+                        <div class="section-label">What I Offer</div>
+                        <h2 class="section-title">Services &amp; Expertise</h2>
+                        <p class="section-sub">
+                            From academic mentorship to enterprise-grade
+                            software delivery — end-to-end technical solutions.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service Cards -->
+                    <div class="service-card reveal">
+                        <div class="service-icon">
+                            <svg
+                                width="26"
+                                height="26"
+                                fill="none"
+                                stroke="var(--sun-deep)"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                            >
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                            </svg>
+                        </div>
+                        <div class="service-title">
+                            Academic Training & Mentorship
+                        </div>
+                        <div class="service-desc">
+                            Designing and delivering effective training programs
+                            with engaging learning materials, interactive
+                            sessions, and a supportive environment that empowers
+                            practical skills.
+                        </div>
+                    </div>
+
+                    <div
+                        class="service-card reveal"
+                        style="transition-delay: 0.08s"
+                    >
+                        <div class="service-icon">
+                            <svg
+                                width="26"
+                                height="26"
+                                fill="none"
+                                stroke="var(--sun-deep)"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                            >
+                                <rect
+                                    x="3"
+                                    y="3"
+                                    width="18"
+                                    height="18"
+                                    rx="2"
+                                />
+                                <path d="M3 9h18M9 21V9" />
+                            </svg>
+                        </div>
+                        <div class="service-title">
+                            Corporate Technical Training
+                        </div>
+                        <div class="service-desc">
+                            Workshops in Rust, Java, Android, Python, web
+                            development, and backend technologies — helping
+                            developers master best practices and gain real
+                            confidence.
+                        </div>
+                    </div>
+
+                    <div
+                        class="service-card reveal"
+                        style="transition-delay: 0.16s"
+                    >
+                        <div class="service-icon">
+                            <svg
+                                width="26"
+                                height="26"
+                                fill="none"
+                                stroke="var(--sun-deep)"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                            >
+                                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                            </svg>
+                        </div>
+                        <div class="service-title">Android App Development</div>
+                        <div class="service-desc">
+                            High-quality, user-friendly Android applications
+                            with Kotlin — responsive design, smooth performance,
+                            Firebase integration, and complex permission
+                            management.
+                        </div>
+                    </div>
+
+                    <div
+                        class="service-card reveal"
+                        style="transition-delay: 0.24s"
+                    >
+                        <div class="service-icon">
+                            <svg
+                                width="26"
+                                height="26"
+                                fill="none"
+                                stroke="var(--sun-deep)"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                            >
+                                <circle cx="12" cy="12" r="10" />
+                                <path
+                                    d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"
+                                />
+                            </svg>
+                        </div>
+                        <div class="service-title">Web Development</div>
+                        <div class="service-desc">
+                            Modern, responsive websites using Java, Jakarta EE,
+                            and Thymeleaf — from landing pages to complete web
+                            applications with secure authentication.
+                        </div>
+                    </div>
+
+                    <div
+                        class="service-card reveal"
+                        style="transition-delay: 0.32s"
+                    >
+                        <div class="service-icon">
+                            <svg
+                                width="26"
+                                height="26"
+                                fill="none"
+                                stroke="var(--sun-deep)"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                            >
+                                <rect
+                                    x="2"
+                                    y="3"
+                                    width="20"
+                                    height="14"
+                                    rx="2"
+                                />
+                                <path d="M8 21h8M12 17v4" />
+                            </svg>
+                        </div>
+                        <div class="service-title">Backend Development</div>
+                        <div class="service-desc">
+                            Robust backend systems with Rust/Spring Boot,
+                            Hibernate, and JPA — specializing in RESTful APIs,
+                            session management, and secure authentication flows.
+                        </div>
+                    </div>
+
+                    <div
+                        class="service-card reveal"
+                        style="transition-delay: 0.4s"
+                    >
+                        <div class="service-icon">
+                            <svg
+                                width="26"
+                                height="26"
+                                fill="none"
+                                stroke="var(--sun-deep)"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                                />
+                            </svg>
+                        </div>
+                        <div class="service-title">Database Management</div>
+                        <div class="service-desc">
+                            MySQL and PostgreSQL database design and management
+                            — CRUD operations, security hardening, indexing, and
+                            reliable data storage and retrieval.
+                        </div>
+                    </div>
+
+                    <div
+                        class="service-card reveal"
+                        style="transition-delay: 0.48s"
+                    >
+                        <div class="service-icon">
+                            <svg
+                                width="26"
+                                height="26"
+                                fill="none"
+                                stroke="var(--sun-deep)"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"
+                                />
+                                <rect x="8" y="2" width="8" height="4" rx="1" />
+                            </svg>
+                        </div>
+                        <div class="service-title">
+                            Academic Compliance & Docs
+                        </div>
+                        <div class="service-desc">
+                            Specialized in AICTE, DTE, NAAC, and UGC
+                            documentation — from initial applications to annual
+                            reporting, ensuring accurate and timely submissions.
+                        </div>
+                    </div>
+
+                    <div
+                        class="service-card reveal"
+                        style="transition-delay: 0.56s"
+                    >
+                        <div class="service-icon">
+                            <svg
+                                width="26"
+                                height="26"
+                                fill="none"
+                                stroke="var(--sun-deep)"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                            >
+                                <circle cx="12" cy="12" r="3" />
+                                <path
+                                    d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"
+                                />
+                            </svg>
+                        </div>
+                        <div class="service-title">
+                            Research &amp; Development
+                        </div>
+                        <div class="service-desc">
+                            Innovation through research in AI-enabled
+                            healthcare, anomaly detection, cybersecurity
+                            incident response, and applied machine learning
+                            solutions.
+                        </div>
+                    </div>
+
+                    <div
+                        class="service-card reveal"
+                        style="transition-delay: 0.64s"
+                    >
+                        <div class="service-icon">
+                            <svg
+                                width="26"
+                                height="26"
+                                fill="none"
+                                stroke="var(--sun-deep)"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"
+                                />
+                                <circle cx="9" cy="7" r="4" />
+                                <path
+                                    d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
+                                />
+                            </svg>
+                        </div>
+                        <div class="service-title">Project Guidance</div>
+                        <div class="service-desc">
+                            Comprehensive guidance for industry and academic
+                            projects — planning, design, development, and
+                            deployment aligned with best practices and modern
+                            technology.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PATENTS ===== -->
+        <section id="patents">
+            <div class="section-inner">
+                <div class="section-label reveal">Innovation</div>
+                <h2 class="section-title reveal">
+                    Granted Indian Design Patents
+                </h2>
+                <p class="section-sub reveal">
+                    Pioneering AI-enabled healthcare and analytical technologies
+                    through applied artificial intelligence research.
+                </p>
+
+                <div class="patents-grid">
+                    <div class="patent-card reveal">
+                        <!-- Patent SVG icon -->
+                        <svg
+                            width="56"
+                            height="56"
+                            viewBox="0 0 56 56"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style="margin-bottom: 1rem"
+                        >
+                            <rect
+                                width="56"
+                                height="56"
+                                rx="16"
+                                fill="url(#pg1)"
+                            />
+                            <defs>
+                                <linearGradient
+                                    id="pg1"
+                                    x1="0"
+                                    y1="0"
+                                    x2="56"
+                                    y2="56"
+                                >
+                                    <stop stop-color="#FDD878" />
+                                    <stop offset="1" stop-color="#F5A623" />
+                                </linearGradient>
+                            </defs>
+                            <path
+                                d="M28 12 C20 12 14 18 14 26 C14 32 17 37 22 40 L22 44 L34 44 L34 40 C39 37 42 32 42 26 C42 18 36 12 28 12Z"
+                                fill="white"
+                                opacity="0.9"
+                            />
+                            <rect
+                                x="22"
+                                y="44"
+                                width="12"
+                                height="3"
+                                rx="1.5"
+                                fill="white"
+                                opacity="0.7"
+                            />
+                            <circle cx="28" cy="26" r="6" fill="#F5A623" />
+                        </svg>
+                        <div class="patent-badge">✦ Granted Patent</div>
+                        <div class="patent-title">
+                            AI Enabled Portable Device for Non-Invasive Cancer
+                            Diagnosis
+                        </div>
+                    </div>
+
+                    <div
+                        class="patent-card reveal"
+                        style="transition-delay: 0.1s"
+                    >
+                        <svg
+                            width="56"
+                            height="56"
+                            viewBox="0 0 56 56"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style="margin-bottom: 1rem"
+                        >
+                            <rect
+                                width="56"
+                                height="56"
+                                rx="16"
+                                fill="url(#pg2)"
+                            />
+                            <defs>
+                                <linearGradient
+                                    id="pg2"
+                                    x1="0"
+                                    y1="0"
+                                    x2="56"
+                                    y2="56"
+                                >
+                                    <stop stop-color="#FF9F43" />
+                                    <stop offset="1" stop-color="#E8891A" />
+                                </linearGradient>
+                            </defs>
+                            <rect
+                                x="14"
+                                y="14"
+                                width="28"
+                                height="28"
+                                rx="4"
+                                fill="white"
+                                opacity="0.9"
+                            />
+                            <circle cx="21" cy="21" r="3" fill="#E8891A" />
+                            <circle cx="28" cy="28" r="3" fill="#E8891A" />
+                            <circle cx="35" cy="21" r="3" fill="#E8891A" />
+                            <path
+                                d="M21 21 L28 28 L35 21"
+                                stroke="#E8891A"
+                                stroke-width="1.5"
+                            />
+                        </svg>
+                        <div class="patent-badge">✦ Granted Patent</div>
+                        <div class="patent-title">
+                            Artificial Intelligence Based Chromatography
+                            Analysis Device
+                        </div>
+                    </div>
+
+                    <div
+                        class="patent-card reveal"
+                        style="transition-delay: 0.2s"
+                    >
+                        <svg
+                            width="56"
+                            height="56"
+                            viewBox="0 0 56 56"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style="margin-bottom: 1rem"
+                        >
+                            <rect
+                                width="56"
+                                height="56"
+                                rx="16"
+                                fill="url(#pg3)"
+                            />
+                            <defs>
+                                <linearGradient
+                                    id="pg3"
+                                    x1="0"
+                                    y1="0"
+                                    x2="56"
+                                    y2="56"
+                                >
+                                    <stop stop-color="#FDD878" />
+                                    <stop offset="1" stop-color="#FF7B2C" />
+                                </linearGradient>
+                            </defs>
+                            <circle
+                                cx="28"
+                                cy="28"
+                                r="14"
+                                fill="white"
+                                opacity="0.9"
+                            />
+                            <path
+                                d="M22 28 L26 32 L34 24"
+                                stroke="#FF7B2C"
+                                stroke-width="2.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <circle
+                                cx="28"
+                                cy="28"
+                                r="8"
+                                fill="none"
+                                stroke="#FF7B2C"
+                                stroke-width="1.5"
+                                stroke-dasharray="3 2"
+                            />
+                        </svg>
+                        <div class="patent-badge">✦ Granted Patent</div>
+                        <div class="patent-title">
+                            AI Enabled Machine Learning Device for Detection of
+                            Diabetic Biomarkers
+                        </div>
+                    </div>
+
+                    <div
+                        class="patent-card reveal"
+                        style="transition-delay: 0.3s"
+                    >
+                        <svg
+                            width="56"
+                            height="56"
+                            viewBox="0 0 56 56"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style="margin-bottom: 1rem"
+                        >
+                            <rect
+                                width="56"
+                                height="56"
+                                rx="16"
+                                fill="url(#pg4)"
+                            />
+                            <defs>
+                                <linearGradient
+                                    id="pg4"
+                                    x1="0"
+                                    y1="0"
+                                    x2="56"
+                                    y2="56"
+                                >
+                                    <stop stop-color="#F5A623" />
+                                    <stop offset="1" stop-color="#E8891A" />
+                                </linearGradient>
+                            </defs>
+                            <path
+                                d="M20 16 L36 16 L42 28 L36 40 L20 40 L14 28 Z"
+                                fill="white"
+                                opacity="0.9"
+                            />
+                            <path
+                                d="M24 24 C24 24 26 20 28 24 C30 28 32 24 32 24"
+                                stroke="#E8891A"
+                                stroke-width="2"
+                                fill="none"
+                                stroke-linecap="round"
+                            />
+                            <circle cx="28" cy="32" r="3" fill="#E8891A" />
+                        </svg>
+                        <div class="patent-badge">✦ Granted Patent</div>
+                        <div class="patent-title">
+                            AI Enabled Device for Computer Aided Drug
+                            Development
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== BOOKS ===== -->
+        <section id="books">
+            <div class="section-inner">
+                <div class="section-label reveal">Publications</div>
+                <h2 class="section-title reveal">Published Books</h2>
+                <p class="section-sub reveal">
+                    Sharing expertise through programming education — authored
+                    books that reflect a commitment to fostering skill
+                    development and knowledge transfer.
+                </p>
+
+                <div class="books-grid">
+                    <div class="book-card reveal">
+                        <div class="book-spine"></div>
+                        <div class="book-body">
+                            <div class="book-icon">🦀</div>
+                            <div class="book-title">
+                                Rust Programming Fundamentals
+                            </div>
+                            <div class="book-isbn">ISBN: 978-93-341-6494-7</div>
+                            <p
+                                style="
+                                    font-size: 0.85rem;
+                                    color: var(--muted);
+                                    line-height: 1.65;
+                                    margin-top: 0.8rem;
+                                "
+                            >
+                                A comprehensive guide to Rust programming —
+                                covering ownership, borrowing, lifetimes, and
+                                systems programming with real-world examples.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="book-card reveal"
+                        style="transition-delay: 0.1s"
+                    >
+                        <div
+                            class="book-spine"
+                            style="
+                                background: linear-gradient(
+                                    180deg,
+                                    var(--dawn),
+                                    #ff5500
+                                );
+                            "
+                        ></div>
+                        <div class="book-body">
+                            <div class="book-icon">📖</div>
+                            <div class="book-title">Rust FAQ</div>
+                            <div class="book-isbn">ISBN: 978-93-344-0729-7</div>
+                            <p
+                                style="
+                                    font-size: 0.85rem;
+                                    color: var(--muted);
+                                    line-height: 1.65;
+                                    margin-top: 0.8rem;
+                                "
+                            >
+                                An essential Q&A reference for Rust programmers
+                                — addressing common challenges, patterns, and
+                                best practices with clear, concise answers.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="book-card reveal"
+                        style="transition-delay: 0.2s"
+                    >
+                        <div
+                            class="book-spine"
+                            style="
+                                background: linear-gradient(
+                                    180deg,
+                                    #fdd878,
+                                    var(--sun-gold)
+                                );
+                            "
+                        ></div>
+                        <div class="book-body">
+                            <div class="book-icon">☕</div>
+                            <div class="book-title">
+                                JAVA Data Structures and Algorithms for
+                                Beginners
+                            </div>
+                            <div class="book-isbn">ISBN: 978-93-343-8254-9</div>
+                            <p
+                                style="
+                                    font-size: 0.85rem;
+                                    color: var(--muted);
+                                    line-height: 1.65;
+                                    margin-top: 0.8rem;
+                                "
+                            >
+                                A beginner-friendly exploration of data
+                                structures and algorithms implemented in Java —
+                                with step-by-step explanations and practical
+                                exercises.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GALLERY ===== -->
+        <section id="gallery">
+            <div class="section-inner">
+                <div class="gallery-header">
+                    <div class="section-label reveal">Portfolio</div>
+                    <h2 class="section-title reveal">
+                        Training Sessions Gallery
+                    </h2>
+                    <p class="section-sub reveal">
+                        A glimpse of live training engagements across India's
+                        leading universities and institutions.
+                    </p>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item reveal">
+                        <img
+                            src="https://anirudhagaikwad.github.io/assets/img/portfolio/PDEA_Manjari_19Apr25.jpg"
+                            alt="PDEA College of Engineering, Manjari, Pune"
+                            loading="lazy"
+                            onerror="
+                                this.parentElement.style.background =
+                                    'linear-gradient(135deg,#FDD878,#F5A623)';
+                                this.style.display = 'none';
+                            "
+                        />
+                        <div class="gallery-overlay">
+                            PDEA College of Engineering, Manjari, Pune
+                        </div>
+                    </div>
+                    <div
+                        class="gallery-item reveal"
+                        style="transition-delay: 0.05s"
+                    >
+                        <img
+                            src="https://anirudhagaikwad.github.io/assets/img/portfolio/AVCOE1.jpg"
+                            alt="Amrutvahini College of Engineering, Sangamner"
+                            loading="lazy"
+                            onerror="
+                                this.parentElement.style.background =
+                                    'linear-gradient(135deg,#FF9F43,#E8891A)';
+                                this.style.display = 'none';
+                            "
+                        />
+                        <div class="gallery-overlay">
+                            Amrutvahini College of Engineering, Sangamner
+                        </div>
+                    </div>
+                    <div
+                        class="gallery-item reveal"
+                        style="transition-delay: 0.1s"
+                    >
+                        <img
+                            src="https://anirudhagaikwad.github.io/assets/img/portfolio/PDEA_Manjari_18Apr25.jpg"
+                            alt="PDEA College of Engineering, Manjari, Pune"
+                            loading="lazy"
+                            onerror="
+                                this.parentElement.style.background =
+                                    'linear-gradient(135deg,#FDD878,#FF7B2C)';
+                                this.style.display = 'none';
+                            "
+                        />
+                        <div class="gallery-overlay">
+                            PDEA College of Engineering, Manjari, Pune
+                        </div>
+                    </div>
+                    <div
+                        class="gallery-item reveal"
+                        style="transition-delay: 0.15s"
+                    >
+                        <img
+                            src="https://anirudhagaikwad.github.io/assets/img/portfolio/baramati3.jpg"
+                            alt="Tuljaram Chaturchand College, Baramati"
+                            loading="lazy"
+                            onerror="
+                                this.parentElement.style.background =
+                                    'linear-gradient(135deg,#F5A623,#E8891A)';
+                                this.style.display = 'none';
+                            "
+                        />
+                        <div class="gallery-overlay">
+                            Tuljaram Chaturchand College, Baramati
+                        </div>
+                    </div>
+                    <div
+                        class="gallery-item reveal"
+                        style="transition-delay: 0.2s"
+                    >
+                        <img
+                            src="https://anirudhagaikwad.github.io/assets/img/portfolio/shinhgad2.jpg"
+                            alt="SIT Sinhgad Institute Of Technology, Lonavala"
+                            loading="lazy"
+                            onerror="
+                                this.parentElement.style.background =
+                                    'linear-gradient(135deg,#FDD878,#F5A623)';
+                                this.style.display = 'none';
+                            "
+                        />
+                        <div class="gallery-overlay">
+                            SIT Sinhgad Institute Of Technology, Lonavala
+                        </div>
+                    </div>
+                    <div
+                        class="gallery-item reveal"
+                        style="transition-delay: 0.25s"
+                    >
+                        <img
+                            src="https://anirudhagaikwad.github.io/assets/img/portfolio/parul1.jpg"
+                            alt="Parul University, Gujarat"
+                            loading="lazy"
+                            onerror="
+                                this.parentElement.style.background =
+                                    'linear-gradient(135deg,#FF9F43,#FF7B2C)';
+                                this.style.display = 'none';
+                            "
+                        />
+                        <div class="gallery-overlay">
+                            Parul University, Gujarat
+                        </div>
+                    </div>
+                    <div
+                        class="gallery-item reveal"
+                        style="transition-delay: 0.3s"
+                    >
+                        <img
+                            src="https://anirudhagaikwad.github.io/assets/img/portfolio/chitkara1.jpg"
+                            alt="Chitkara University, Punjab"
+                            loading="lazy"
+                            onerror="
+                                this.parentElement.style.background =
+                                    'linear-gradient(135deg,#FDD878,#F5A623)';
+                                this.style.display = 'none';
+                            "
+                        />
+                        <div class="gallery-overlay">
+                            Chitkara University, Punjab
+                        </div>
+                    </div>
+                    <div
+                        class="gallery-item reveal"
+                        style="transition-delay: 0.35s"
+                    >
+                        <img
+                            src="https://anirudhagaikwad.github.io/assets/img/portfolio/bitm1.jpg"
+                            alt="Ballari Institute of Technology & Management"
+                            loading="lazy"
+                            onerror="
+                                this.parentElement.style.background =
+                                    'linear-gradient(135deg,#E8891A,#FF7B2C)';
+                                this.style.display = 'none';
+                            "
+                        />
+                        <div class="gallery-overlay">
+                            Ballari Institute of Technology &amp; Management
+                        </div>
+                    </div>
+                    <div
+                        class="gallery-item reveal"
+                        style="transition-delay: 0.4s"
+                    >
+                        <img
+                            src="https://anirudhagaikwad.github.io/assets/img/portfolio/chitkara3.jpg"
+                            alt="Chitkara University, Punjab"
+                            loading="lazy"
+                            onerror="
+                                this.parentElement.style.background =
+                                    'linear-gradient(135deg,#FDD878,#E8891A)';
+                                this.style.display = 'none';
+                            "
+                        />
+                        <div class="gallery-overlay">
+                            Chitkara University, Punjab
+                        </div>
+                    </div>
+                    <div
+                        class="gallery-item reveal"
+                        style="transition-delay: 0.45s"
+                    >
+                        <img
+                            src="https://anirudhagaikwad.github.io/assets/img/portfolio/karmayogi1.jpg"
+                            alt="Karmayogi Institute of Technology, Shelve"
+                            loading="lazy"
+                            onerror="
+                                this.parentElement.style.background =
+                                    'linear-gradient(135deg,#F5A623,#FF7B2C)';
+                                this.style.display = 'none';
+                            "
+                        />
+                        <div class="gallery-overlay">
+                            Karmayogi Institute of Technology, Shelve
+                        </div>
+                    </div>
+                    <div
+                        class="gallery-item reveal"
+                        style="transition-delay: 0.5s"
+                    >
+                        <img
+                            src="https://anirudhagaikwad.github.io/assets/img/portfolio/parul2.jpg"
+                            alt="Parul University, Gujarat"
+                            loading="lazy"
+                            onerror="
+                                this.parentElement.style.background =
+                                    'linear-gradient(135deg,#FDD878,#FF9F43)';
+                                this.style.display = 'none';
+                            "
+                        />
+                        <div class="gallery-overlay">
+                            Parul University, Gujarat
+                        </div>
+                    </div>
+                    <div
+                        class="gallery-item reveal"
+                        style="transition-delay: 0.55s"
+                    >
+                        <img
+                            src="https://anirudhagaikwad.github.io/assets/img/portfolio/vishnuUni1.jpg"
+                            alt="Shri Vishnu Engineering College for Women, Bhimavaram"
+                            loading="lazy"
+                            onerror="
+                                this.parentElement.style.background =
+                                    'linear-gradient(135deg,#E8891A,#F5A623)';
+                                this.style.display = 'none';
+                            "
+                        />
+                        <div class="gallery-overlay">
+                            Shri Vishnu Engineering College for Women,
+                            Bhimavaram
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TESTIMONIALS ===== -->
+        <section id="testimonials">
+            <div class="section-inner">
+                <div class="section-label reveal">Reviews</div>
+                <h2 class="section-title reveal">What They Say</h2>
+                <p class="section-sub reveal">
+                    Feedback from professionals, students, and collaborators
+                    across 5000+ training engagements.
+                </p>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal">
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">
+                            Anirudha Gaikwad Sir is a skilled and polite trainer
+                            who brings deep knowledge to their sessions. They
+                            explain the "why" behind each concept, making it
+                            easier to understand. Their focus on hands-on
+                            practice helps us apply what we learn right away.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="t-avatar">S</div>
+                            <div>
+                                <div class="t-name">Student Feedback</div>
+                                <div class="t-role">Training Participant</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="testimonial-card reveal"
+                        style="transition-delay: 0.1s"
+                    >
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">
+                            Your knowledge and your teaching correlation was
+                            wonderful. This quality helps many students to
+                            learn, understand, and implement their knowledge
+                            into applications. You have the best combination of
+                            both teaching and technical expertise.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="t-avatar">P</div>
+                            <div>
+                                <div class="t-name">Professional Trainee</div>
+                                <div class="t-role">Corporate Workshop</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="testimonial-card reveal"
+                        style="transition-delay: 0.2s"
+                    >
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">
+                            Mr. Aniruddha possesses a strong command over the
+                            subject matter, ensuring clear and accurate
+                            explanations. He provides relevant real-world
+                            examples that help clarify complex concepts with
+                            remarkable clarity.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="t-avatar">A</div>
+                            <div>
+                                <div class="t-name">Academic Reviewer</div>
+                                <div class="t-role">University Faculty</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="testimonial-card reveal"
+                        style="transition-delay: 0.3s"
+                    >
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">
+                            The technical training delivered by Anirudh Sir was
+                            highly effective. He presented complex topics in a
+                            simple, understandable manner and engaged
+                            participants throughout. His expertise made concepts
+                            easier to grasp.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="t-avatar">T</div>
+                            <div>
+                                <div class="t-name">Tech Trainee</div>
+                                <div class="t-role">
+                                    Corporate Development Program
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="testimonial-card reveal"
+                        style="transition-delay: 0.4s"
+                    >
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">
+                            You're dedicated and skilled in development —
+                            especially with Java and Android. You approach
+                            projects with both detail and innovation. Your
+                            persistence in overcoming challenges reflects
+                            commitment to delivering efficient solutions.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="t-avatar">C</div>
+                            <div>
+                                <div class="t-name">Collaborator</div>
+                                <div class="t-role">
+                                    Software Development Project
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="testimonial-card reveal"
+                        style="transition-delay: 0.5s"
+                    >
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">
+                            The hands-on exercises during the session were
+                            particularly useful. Dr. Anirudha's dual expertise
+                            in software development and education truly bridges
+                            the gap between academic learning and real industry
+                            requirements.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="t-avatar">B</div>
+                            <div>
+                                <div class="t-name">
+                                    ByteXL TechEd Participant
+                                </div>
+                                <div class="t-role">EdTech Training</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section id="contact">
+            <div class="section-inner">
+                <div class="contact-wrapper">
+                    <div class="contact-info reveal">
+                        <div class="section-label">Get in Touch</div>
+                        <h2 class="section-title">Let's Work<br />Together</h2>
+                        <p class="contact-desc">
+                            Looking for a passionate technical trainer, software
+                            developer, or academic consultant? I'd love to
+                            connect and discuss how we can create impactful
+                            solutions together.
+                        </p>
+
+                        <!-- Availability badge -->
+                        <div
+                            style="
+                                display: inline-flex;
+                                align-items: center;
+                                gap: 0.6rem;
+                                background: rgba(34, 197, 94, 0.08);
+                                border: 1px solid rgba(34, 197, 94, 0.25);
+                                border-radius: 50px;
+                                padding: 0.5rem 1rem;
+                                margin-top: 1.5rem;
+                            "
+                        >
+                            <div
+                                style="
+                                    width: 8px;
+                                    height: 8px;
+                                    border-radius: 50%;
+                                    background: #22c55e;
+                                    animation: pulse 2s infinite;
+                                "
+                            ></div>
+                            <span
+                                style="
+                                    font-size: 0.8rem;
+                                    font-weight: 600;
+                                    color: #15803d;
+                                "
+                                >Available for new engagements</span
+                            >
+                        </div>
+
+                        <div class="contact-items" style="margin-top: 2rem">
+                            <a
+                                href="mailto:gaikwad.anirudha@gmail.com"
+                                class="contact-item"
+                            >
+                                <div class="contact-icon">
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                        />
+                                        <polyline points="22,6 12,13 2,6" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="contact-text">
+                                        gaikwad.anirudha@gmail.com
+                                    </div>
+                                    <div class="contact-sublabel">
+                                        Primary Email
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a
+                                href="https://anirudhagaikwad.github.io/"
+                                target="_blank"
+                                class="contact-item"
+                                style="text-decoration: none"
+                            >
+                                <div class="contact-icon">
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path
+                                            d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"
+                                        />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="contact-text">
+                                        anirudhagaikwad.github.io
+                                    </div>
+                                    <div class="contact-sublabel">
+                                        Portfolio Website
+                                    </div>
+                                </div>
+                            </a>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"
+                                        />
+                                        <circle cx="12" cy="10" r="3" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="contact-text">
+                                        Maharashtra, India
+                                    </div>
+                                    <div class="contact-sublabel">
+                                        Available Nationwide & Remote
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <rect
+                                            x="2"
+                                            y="3"
+                                            width="20"
+                                            height="14"
+                                            rx="2"
+                                        />
+                                        <path d="M8 21h8M12 17v4" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="contact-text">
+                                        Online & On-Site Training
+                                    </div>
+                                    <div class="contact-sublabel">
+                                        Flexible engagement models
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tech logos strip -->
+                        <div style="margin-top: 2.5rem">
+                            <div
+                                style="
+                                    font-size: 0.75rem;
+                                    font-weight: 700;
+                                    color: var(--muted);
+                                    letter-spacing: 0.1em;
+                                    text-transform: uppercase;
+                                    margin-bottom: 1rem;
+                                "
+                            >
+                                Trusted By
+                            </div>
+                            <div
+                                style="
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    gap: 0.5rem;
+                                "
+                            >
+                                <span
+                                    style="
+                                        padding: 0.3rem 0.8rem;
+                                        background: var(--sun-pale);
+                                        border-radius: 50px;
+                                        font-size: 0.78rem;
+                                        font-weight: 600;
+                                        color: var(--mid);
+                                    "
+                                    >Chitkara University</span
+                                >
+                                <span
+                                    style="
+                                        padding: 0.3rem 0.8rem;
+                                        background: var(--sun-pale);
+                                        border-radius: 50px;
+                                        font-size: 0.78rem;
+                                        font-weight: 600;
+                                        color: var(--mid);
+                                    "
+                                    >Parul University</span
+                                >
+                                <span
+                                    style="
+                                        padding: 0.3rem 0.8rem;
+                                        background: var(--sun-pale);
+                                        border-radius: 50px;
+                                        font-size: 0.78rem;
+                                        font-weight: 600;
+                                        color: var(--mid);
+                                    "
+                                    >Symbiosis</span
+                                >
+                                <span
+                                    style="
+                                        padding: 0.3rem 0.8rem;
+                                        background: var(--sun-pale);
+                                        border-radius: 50px;
+                                        font-size: 0.78rem;
+                                        font-weight: 600;
+                                        color: var(--mid);
+                                    "
+                                    >ByteXL</span
+                                >
+                                <span
+                                    style="
+                                        padding: 0.3rem 0.8rem;
+                                        background: var(--sun-pale);
+                                        border-radius: 50px;
+                                        font-size: 0.78rem;
+                                        font-weight: 600;
+                                        color: var(--mid);
+                                    "
+                                    >Zensar</span
+                                >
+                                <span
+                                    style="
+                                        padding: 0.3rem 0.8rem;
+                                        background: var(--sun-pale);
+                                        border-radius: 50px;
+                                        font-size: 0.78rem;
+                                        font-weight: 600;
+                                        color: var(--mid);
+                                    "
+                                    >TechnoWings</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="contact-form reveal"
+                        style="transition-delay: 0.15s"
+                    >
+                        <h3
+                            style="
+                                font-family:
+                                    &quot;Playfair Display&quot;, serif;
+                                font-size: 1.4rem;
+                                font-weight: 700;
+                                color: var(--dark);
+                                margin-bottom: 1.8rem;
+                            "
+                        >
+                            Send a Message
+                        </h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" placeholder="John" />
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" placeholder="Doe" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input
+                                type="email"
+                                placeholder="john@company.com"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label>Organisation / Institution</label>
+                            <input
+                                type="text"
+                                placeholder="Your company or university"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label>Service Required</label>
+                            <select>
+                                <option value="">Select a service...</option>
+                                <option>Corporate Technical Training</option>
+                                <option>Academic Training & Mentorship</option>
+                                <option>Android App Development</option>
+                                <option>Web / Backend Development</option>
+                                <option>Project Guidance</option>
+                                <option>
+                                    Academic Compliance Documentation
+                                </option>
+                                <option>Research & Development</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Message</label>
+                            <textarea
+                                placeholder="Tell me about your training requirement, project, or enquiry..."
+                            ></textarea>
+                        </div>
+                        <button
+                            class="btn-primary"
+                            style="
+                                width: 100%;
+                                justify-content: center;
+                                font-size: 0.95rem;
+                            "
+                            onclick="handleSend(event)"
+                        >
+                            <svg
+                                width="18"
+                                height="18"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                            >
+                                <line x1="22" y1="2" x2="11" y2="13" />
+                                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                            </svg>
+                            Send Message
+                        </button>
+                        <p
+                            style="
+                                text-align: center;
+                                font-size: 0.78rem;
+                                color: var(--muted);
+                                margin-top: 1rem;
+                            "
+                        >
+                            I typically respond within 24 hours.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FOOTER ===== -->
+        <footer>
+            <div class="footer-inner">
+                <div>
+                    <div class="footer-brand">Dr. Anirudha Anil Gaikwad</div>
+                    <div style="margin-top: 0.4rem; font-size: 0.8rem">
+                        Assistant Professor · Developer · Trainer
+                    </div>
+                </div>
+                <nav class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#patents">Patents</a>
+                    <a href="#books">Books</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <div style="text-align: right">
+                    <div>
+                        © <span class="copy-year"></span> Dr. Anirudha Anil
+                        Gaikwad
+                    </div>
+                    <div style="margin-top: 0.3rem; font-size: 0.75rem">
+                        All Rights Reserved · Maharashtra, India
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script
+            data-cfasync="false"
+            src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+        ></script>
+        <script>
+            // Auto copyright year
+            document
+                .querySelectorAll(".copy-year")
+                .forEach((el) => (el.textContent = new Date().getFullYear()));
+
+            // Nav scroll
+            const navbar = document.getElementById("navbar");
+            window.addEventListener("scroll", () => {
+                navbar.classList.toggle("scrolled", window.scrollY > 30);
+            });
+
+            // Hamburger
+            const hamburger = document.getElementById("hamburger");
+            const navLinks = document.getElementById("navLinks");
+            hamburger.addEventListener("click", () => {
+                navLinks.classList.toggle("open");
+            });
+            navLinks.querySelectorAll("a").forEach((a) => {
+                a.addEventListener("click", () =>
+                    navLinks.classList.remove("open"),
+                );
+            });
+
+            // Intersection Observer for reveal animations
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((e) => {
+                        if (e.isIntersecting) {
+                            e.target.classList.add("visible");
+                            observer.unobserve(e.target);
+                        }
+                    });
+                },
+                { threshold: 0.12 },
+            );
+
+            document
+                .querySelectorAll(".reveal")
+                .forEach((el) => observer.observe(el));
+
+            // Back to top visibility
+            const btt = document.getElementById("backToTop");
+            window.addEventListener("scroll", () => {
+                btt.style.display = window.scrollY > 400 ? "flex" : "none";
+            });
+
+            // Contact form handler
+            function handleSend(e) {
+                const btn = e.currentTarget;
+                btn.innerHTML = `<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Message Sent!`;
+                btn.style.background =
+                    "linear-gradient(135deg, #22C55E, #16A34A)";
+                setTimeout(() => {
+                    btn.innerHTML = `<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message`;
+                    btn.style.background = "";
+                }, 3000);
+            }
+        </script>
+
+        <!-- Back to Top Button -->
+        <button
+            id="backToTop"
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+            onmouseenter="
+                this.style.transform = 'translateY(-3px)';
+                this.style.boxShadow = '0 12px 30px rgba(245,166,35,0.6)';
+            "
+            onmouseleave="
+                this.style.transform = '';
+                this.style.boxShadow = '0 6px 20px rgba(245,166,35,0.45)';
+            "
+            style="
+                position: fixed;
+                bottom: 2rem;
+                right: 2rem;
+                z-index: 999;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                border: none;
+                cursor: pointer;
+                background: linear-gradient(
+                    135deg,
+                    var(--sun-gold),
+                    var(--dawn)
+                );
+                color: white;
+                box-shadow: 0 6px 20px rgba(245, 166, 35, 0.45);
+                display: none;
+                align-items: center;
+                justify-content: center;
+                transition:
+                    transform 0.2s,
+                    box-shadow 0.2s;
+            "
+        >
+            <svg
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                viewBox="0 0 24 24"
+            >
+                <polyline points="18 15 12 9 6 15" />
+            </svg>
+        </button>
+    </body>
 </html>
